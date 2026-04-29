@@ -3,24 +3,41 @@ const path    = require('path');
 const fs      = require('fs');
 const app     = express();
 
-const PUBLIC     = path.join(__dirname, 'public');
 const SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL || '';
 
-function serveHtml(file, res) {
+function serveHtml(filePath, res) {
   try {
-    let html = fs.readFileSync(path.join(PUBLIC, file), 'utf8');
+    let html = fs.readFileSync(filePath, 'utf8');
     html = html.replace(/REPLACE_WITH_SCRIPT_URL/g, SCRIPT_URL);
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.send(html);
   } catch (e) {
-    res.status(404).send('Not found: ' + file);
+    res.status(404).send('Not found: ' + filePath);
   }
 }
 
-app.get('/investor', (req, res) => serveHtml('investor.html', res));
-app.get('/',         (req, res) => serveHtml('index.html',    res));
-app.use(express.static(PUBLIC));
-app.get('*',         (req, res) => serveHtml('index.html',    res));
+// investor.html is in public/
+app.get('/investor', (req, res) => {
+  serveHtml(path.join(__dirname, 'public', 'investor.html'), res);
+});
+
+// index.html is at root
+app.get('/', (req, res) => {
+  serveHtml(path.join(__dirname, 'index.html'), res);
+});
+
+// Static files from public/ (css, images etc)
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
+
+// Everything else → index.html
+app.get('*', (req, res) => {
+  serveHtml(path.join(__dirname, 'index.html'), res);
+});
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log('SkillBridge Arabia running on port ' + PORT));
+app.listen(PORT, () => {
+  console.log('SkillBridge Arabia on port ' + PORT);
+  console.log('index.html  → root');
+  console.log('investor    → public/investor.html');
+});
