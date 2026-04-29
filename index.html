@@ -687,7 +687,6 @@ footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(25
     </div>
     <div>
       <div class="form-box" id="cform">
-        <input type="hidden" id="gscript-url" value="REPLACE_WITH_SCRIPT_URL">
         <div class="form-err" id="ferr">Please enter your name and a valid email address.</div>
         <div class="ff"><label>Your name</label><input type="text" id="fn" placeholder="Mohammad Rahman"></div>
         <div class="ff"><label>Email address</label><input type="email" id="fe" placeholder="you@company.com"></div>
@@ -813,7 +812,7 @@ async function handleSubmit() {
   btn.disabled = true;
 
   try {
-    const GOOGLE_SCRIPT_URL = document.getElementById('https://script.google.com/macros/s/AKfycbzIlEf6m_O_8iELZgVNW1d97JGMe4vz43C6xvCRYxIT3snF4_Vz_EUefYa45iAXrUpm/exec')?.value || '';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzIlEf6m_O_8iELZgVNW1d97JGMe4vz43C6xvCRYxIT3snF4_Vz_EUefYa45iAXrUpm/exec';
     if (GOOGLE_SCRIPT_URL) {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
