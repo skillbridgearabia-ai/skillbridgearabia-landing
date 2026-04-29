@@ -3,923 +3,836 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SkillBridge Arabia &mdash; Training the GCC&rsquo;s Frontline Workforce</title>
-<meta name="description" content="SkillBridge Arabia helps coffee shops, restaurants and recruitment agencies train expat workers before they arrive in Saudi Arabia. Certified courses, Arabic language and digital certificates.">
-<meta name="robots" content="noindex, nofollow">
-<!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>SkillBridge Arabia — From Origin to Excellence</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-/* ===== BRAND TOKENS (from brand guidelines) ===== */
-:root{
-  /* Primary */
-  --gold:#B78A2A;
-  --gold-h:#9a7420;
-  --gold-l:#fdf8ee;
-  --gold-m:#e8d08a;
-  --gold-b:#d4b860;
-  --gold-d:#7a5c15;
-  --charcoal:#2B2B2B;
-  --charcoal2:#3d3d3d;
-  --charcoal3:#5a5a5a;
-  /* Secondary */
-  --warm-bg:#F5F2EC;
-  --warm-bg2:#ede9e0;
-  --neutral-gray:#6E6E6E;
-  --light-gray:#F2F2F2;
-  --surf:#ffffff;
-  /* Semantic */
-  --sage:#2d6a52;--sage-l:#e8f4ef;--sage-m:#a8d4c0;
-  --terra:#c04a2c;--terra-l:#fdf0ec;
-  --border:#e0dbd0;--border2:#cdc8bc;
-  --r:6px;--r2:10px;--r3:14px;
-  --sh:0 1px 3px rgba(43,43,43,.07);
-  --sh2:0 4px 20px rgba(43,43,43,.09);
-  --sh3:0 12px 48px rgba(43,43,43,.12);
-  /* Typography */
-  --serif:"Playfair Display",Georgia,serif;
-  --font:"Inter",sans-serif;
-  --mono:"JetBrains Mono",monospace;
-  --max:1100px;
-}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#B78A2A;
+  --gold-deep:#8C6315;
+  --gold-pale:#FBF5E6;
+  --gold-mid:#E8C97A;
+  --ink:#1A1714;
+  --ink-2:#3D3830;
+  --ink-3:#6B6560;
+  --ink-4:#A09890;
+  --cream:#FAFAF6;
+  --cream-2:#F3F0E8;
+  --cream-3:#EAE6DC;
+  --white:#FFFFFF;
+  --sage:#2D6A52;
+  --sage-pale:#EEF7F2;
+  --terra:#B84030;
+  --terra-pale:#FDF1EE;
+  --border:#DDD8CC;
+  --border-2:#C8C2B4;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+  --mono:'DM Mono',monospace;
+  --radius:8px;
+  --shadow:0 2px 12px rgba(26,23,20,.07);
+  --shadow-2:0 8px 32px rgba(26,23,20,.1);
+}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--surf);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-button,input,select,textarea{font-family:inherit;}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button{font-family:var(--sans);cursor:pointer}
+img{max-width:100%}
 
-/* ===== NAV ===== */
-.nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,0.96);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-}
-.nav-inner{
-  max-width:var(--max);margin:0 auto;padding:0 48px;
-  height:66px;display:flex;align-items:center;justify-content:space-between;
-}
-.nav-brand{display:flex;flex-direction:column;gap:2px;text-decoration:none;}
-.nav-wm{font-family:var(--serif);font-size:20px;color:var(--charcoal);letter-spacing:-.2px;line-height:1;font-weight:700;}
-.nav-wm em{color:var(--gold);font-style:italic;}
-.nav-sub{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--neutral-gray);font-weight:600;}
-.nav-links{display:flex;align-items:center;gap:32px;}
-.nav-link{font-size:13px;font-weight:500;color:var(--neutral-gray);cursor:pointer;text-decoration:none;transition:color .15s;}
-.nav-link:hover{color:var(--charcoal);}
-.nav-actions{display:flex;align-items:center;gap:10px;}
-.btn-try{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:9px 18px;
-  background:var(--warm-bg);border:1px solid var(--border2);
-  border-radius:var(--r);font-size:12px;font-weight:700;
-  color:var(--charcoal);text-decoration:none;
-  transition:all .18s;letter-spacing:.02em;
-}
-.btn-try:hover{background:var(--warm-bg2);border-color:var(--gold-b);}
-.nav-cta{
-  padding:9px 20px;background:var(--charcoal);color:#fff;
-  border:none;border-radius:var(--r);font-size:12px;font-weight:700;
-  cursor:pointer;transition:all .18s;text-decoration:none;
-  display:inline-flex;align-items:center;gap:6px;letter-spacing:.02em;
-}
-.nav-cta:hover{background:var(--charcoal2);transform:translateY(-1px);box-shadow:var(--sh2);}
+/* UTILITIES */
+.container{max-width:1080px;margin:0 auto;padding:0 5%}
+.sec-tag{font-size:.7rem;font-weight:600;color:var(--gold-deep);letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+.section-rule{width:48px;height:2px;background:var(--gold);display:block;margin-bottom:20px}
 
-/* ===== HERO ===== */
-.hero{
-  background:var(--warm-bg);
-  border-bottom:1px solid var(--border);
-  overflow:hidden;position:relative;
-}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(ellipse 55% 80% at 100% 50%,rgba(183,138,42,0.08) 0%,transparent 60%);
-  pointer-events:none;
-}
-.hero-inner{
-  max-width:var(--max);margin:0 auto;padding:80px 48px;
-  display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:center;
-  position:relative;z-index:1;
-}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:6px 14px;background:var(--surf);border:1px solid var(--gold-b);
-  border-radius:24px;font-size:10px;font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gold-d);margin-bottom:24px;
-  box-shadow:var(--sh);
-}
-.hero-edot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
-.hero-h1{
-  font-family:var(--serif);
-  font-size:clamp(36px,4.2vw,54px);
-  font-weight:700;color:var(--charcoal);
-  line-height:1.12;letter-spacing:-.02em;
-  margin-bottom:10px;
-}
-.hero-h1 em{color:var(--gold);font-style:italic;}
-.hero-h1 .line3{
-  display:block;font-weight:400;font-style:italic;
-  font-size:clamp(30px,3.5vw,44px);color:var(--neutral-gray);
-}
-.hero-rule{
-  width:52px;height:3px;
-  background:linear-gradient(90deg,var(--gold),rgba(183,138,42,0));
-  margin:20px 0 22px;border-radius:2px;
-}
-.hero-desc{
-  font-size:16px;color:var(--neutral-gray);line-height:1.75;
-  max-width:500px;margin-bottom:32px;font-weight:400;
-}
-.hero-desc strong{color:var(--charcoal);font-weight:600;}
-.hero-btns{display:flex;align-items:center;gap:12px;margin-bottom:40px;flex-wrap:wrap;}
-.btn-primary{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:13px 24px;background:var(--charcoal);color:#fff;
-  border:none;border-radius:var(--r);font-size:13px;font-weight:700;
-  cursor:pointer;transition:all .18s;text-decoration:none;letter-spacing:.02em;
-}
-.btn-primary:hover{background:var(--charcoal2);transform:translateY(-1px);box-shadow:var(--sh2);}
-.btn-app{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:13px 24px;
-  background:linear-gradient(135deg,var(--gold),var(--gold-h));
-  color:#fff;border:none;border-radius:var(--r);
-  font-size:13px;font-weight:700;
-  cursor:pointer;transition:all .18s;text-decoration:none;letter-spacing:.02em;
-  box-shadow:0 3px 12px rgba(183,138,42,0.3);
-}
-.btn-app:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(183,138,42,0.4);}
-.btn-app-icon{font-size:15px;}
-.hero-kpis{display:flex;gap:0;}
-.hk{
-  padding:0 24px;border-left:2px solid var(--gold-b);
-}
-.hk:first-child{padding-left:0;border-left:none;}
-.hk-num{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--gold);line-height:1;letter-spacing:-.02em;}
-.hk-lbl{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--neutral-gray);margin-top:4px;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;align-items:center;background:rgba(250,250,246,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:transform .3s}
+.nav-inner{max-width:1080px;margin:0 auto;width:100%;padding:0 5%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--serif);font-size:1.25rem;color:var(--ink);font-weight:600;letter-spacing:.01em}
+.nav-logo em{color:var(--gold);font-style:italic}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:.78rem;font-weight:500;color:var(--ink-3);letter-spacing:.04em;transition:color .18s}
+.nav-links a:hover{color:var(--gold-deep)}
+.nav-cta{padding:8px 20px;background:var(--gold);color:var(--white);border-radius:var(--radius);font-size:.78rem;font-weight:600;letter-spacing:.03em;transition:all .18s}
+.nav-cta:hover{background:var(--gold-deep);transform:translateY(-1px)}
+@media(max-width:700px){.nav-links{display:none}}
 
-/* ===== HERO PHOTO ===== */
-.hero-photo-wrap{position:relative;}
-.hero-photo{
-  width:100%;aspect-ratio:4/3;
-  border-radius:var(--r3);overflow:hidden;
-  box-shadow:0 20px 60px rgba(43,43,43,.18);
-  position:relative;
-}
-.hero-photo-img{
-  width:100%;height:100%;object-fit:cover;
-  display:block;
-  background:linear-gradient(135deg,var(--charcoal) 0%,#1a1208 100%);
-}
-/* Fallback illustration when no real photo */
-.hero-photo-fallback{
-  width:100%;height:100%;
-  background:linear-gradient(135deg,var(--charcoal) 0%,#1f1708 60%,#2d1f08 100%);
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  gap:16px;padding:32px;
-}
-.hpf-scene{
-  display:flex;align-items:flex-end;justify-content:center;gap:20px;
-  margin-bottom:8px;
-}
-.hpf-person{
-  display:flex;flex-direction:column;align-items:center;gap:4px;
-}
-.hpf-head{
-  width:40px;height:40px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:20px;
-}
-.hpf-body{
-  width:36px;height:52px;border-radius:10px 10px 4px 4px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:11px;font-weight:700;letter-spacing:.05em;
-}
-.hpf-phone{
-  width:52px;height:80px;background:var(--charcoal);
-  border:3px solid rgba(183,138,42,.5);border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:22px;margin-bottom:8px;
-  box-shadow:0 4px 16px rgba(0,0,0,.3);
-}
-.hpf-phone-screen{
-  position:absolute;inset:3px;
-  background:linear-gradient(180deg,rgba(183,138,42,.15),rgba(183,138,42,.05));
-  border-radius:7px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:4px;
-}
-.hpf-caption{
-  font-size:13px;color:rgba(255,255,255,.55);text-align:center;line-height:1.5;
-}
-.hpf-caption strong{color:var(--gold);}
+/* HERO */
+#hero{padding:120px 5% 80px;background:var(--white);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero-ornament{position:absolute;top:-80px;right:-60px;width:480px;height:480px;border-radius:50%;background:radial-gradient(ellipse,rgba(183,138,42,.08) 0%,transparent 68%);pointer-events:none}
+.hero-ornament-2{position:absolute;bottom:-120px;left:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(ellipse,rgba(45,106,82,.06) 0%,transparent 68%);pointer-events:none}
+.hero-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:1}
+.hero-left{}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;background:var(--gold-pale);border:1px solid var(--gold-mid);border-radius:24px;font-size:.7rem;font-weight:600;color:var(--gold-deep);letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px}
+.hero-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:breathe 2.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,4.4rem);line-height:1.08;color:var(--ink);font-weight:700;margin-bottom:20px}
+h1 em{color:var(--gold);font-style:italic;display:block}
+h1 .muted{color:var(--ink-4);font-weight:400}
+.hero-body{font-size:1rem;color:var(--ink-3);line-height:1.8;max-width:480px;margin-bottom:32px;font-weight:300}
+.hero-body strong{color:var(--ink);font-weight:500}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{padding:13px 28px;background:var(--gold);color:var(--white);border-radius:var(--radius);font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .2s;border:none}
+.btn-primary:hover{background:var(--gold-deep);transform:translateY(-2px);box-shadow:0 8px 24px rgba(183,138,42,.35)}
+.btn-outline{padding:13px 28px;background:transparent;color:var(--ink-2);border:1.5px solid var(--border-2);border-radius:var(--radius);font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-1px)}
+.hero-right{display:flex;flex-direction:column;gap:14px}
+.hero-stat-card{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;position:relative;overflow:hidden}
+.hero-stat-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold)}
+.hsc-num{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:4px}
+.hsc-lbl{font-size:.82rem;color:var(--ink-3);line-height:1.5}
+.hsc-sub{font-size:.72rem;color:var(--ink-4);margin-top:3px}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr;gap:48px}.hero-right{display:grid;grid-template-columns:1fr 1fr;gap:10px}}
 
-/* pill overlays on photo */
-.hero-pill{
-  position:absolute;
-  background:var(--surf);border:1px solid var(--border);
-  border-radius:var(--r2);padding:10px 14px;
-  box-shadow:var(--sh2);
-}
-.hero-pill-1{bottom:-16px;left:-20px;}
-.hero-pill-2{top:-16px;right:-16px;}
-.hp-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--neutral-gray);margin-bottom:3px;}
-.hp-val{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold);line-height:1;}
-.hp-sub{font-size:10px;color:var(--neutral-gray);margin-top:2px;}
+/* MISSION BAND */
+#mission{padding:48px 5%;background:var(--ink);position:relative;overflow:hidden}
+.mission-stripe{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 120px,rgba(183,138,42,.04) 120px,rgba(183,138,42,.04) 121px)}
+.mission-inner{max-width:860px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.mission-inner p{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2.1rem);font-style:italic;color:rgba(255,255,255,.9);line-height:1.5;font-weight:400}
+.mission-inner p em{color:var(--gold-mid);font-style:normal;font-weight:600}
 
-/* ===== SECTIONS BASE ===== */
-section{padding:80px 0;}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 48px;}
-.sec-eyebrow{
-  display:inline-flex;align-items:center;gap:7px;
-  font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold-d);margin-bottom:14px;
-}
-.sec-edot{width:5px;height:5px;border-radius:50%;background:var(--gold);}
-.sec-title{
-  font-family:var(--serif);font-size:clamp(26px,2.8vw,38px);
-  font-weight:700;color:var(--charcoal);
-  line-height:1.2;margin-bottom:14px;
-}
-.sec-title em{color:var(--gold);font-style:italic;}
-.sec-sub{font-size:15px;color:var(--neutral-gray);line-height:1.7;max-width:600px;}
+/* STORY */
+#story{padding:96px 5%;background:var(--white)}
+.story-wrap{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.story-left h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);color:var(--ink);line-height:1.2;margin-bottom:20px;font-weight:700}
+.story-left h2 em{color:var(--gold);font-style:italic}
+.story-left p{color:var(--ink-3);line-height:1.85;margin-bottom:16px;font-size:.95rem;font-weight:300}
+.story-left p strong{color:var(--ink);font-weight:500}
+.story-pull{margin-top:28px;padding:24px 28px;background:var(--gold-pale);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0}
+.story-pull q{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--ink);line-height:1.65;display:block;margin-bottom:10px;quotes:none}
+.story-pull q::before,.story-pull q::after{content:none}
+.story-pull cite{font-size:.75rem;color:var(--gold-deep);letter-spacing:.06em;font-style:normal}
+.origin-cards{display:flex;flex-direction:column;gap:12px}
+.origin-card{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);transition:all .2s}
+.origin-card:hover{border-color:var(--gold-mid);background:var(--gold-pale);transform:translateX(5px)}
+.origin-flag{font-size:1.9rem;flex-shrink:0;line-height:1}
+.origin-info .oc{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:3px}
+.origin-info .od{font-size:.8rem;color:var(--ink-3);line-height:1.55}
+@media(max-width:768px){.story-wrap{grid-template-columns:1fr;gap:48px}}
 
-/* ===== TRY APP BAND ===== */
-.app-band{
-  background:var(--charcoal);padding:0;overflow:hidden;
-}
-.app-band-inner{
-  max-width:var(--max);margin:0 auto;padding:40px 48px;
-  display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;
-  position:relative;
-}
-.app-band-inner::before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(ellipse 60% 100% at 80% 50%,rgba(183,138,42,.15) 0%,transparent 60%);
-  pointer-events:none;
-}
-.app-band-inner::after{
-  content:"";position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);
-  background-size:24px 24px;pointer-events:none;
-}
-.abl{position:relative;z-index:1;}
-.ab-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-.ab-title{font-family:var(--serif);font-size:clamp(22px,2.5vw,32px);font-style:italic;font-weight:600;color:#fff;line-height:1.2;margin-bottom:6px;}
-.ab-sub{font-size:14px;color:rgba(255,255,255,.45);line-height:1.6;}
-.ab-actions{display:flex;align-items:center;gap:12px;position:relative;z-index:1;flex-shrink:0;}
-.btn-app-large{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:15px 28px;
-  background:linear-gradient(135deg,var(--gold),var(--gold-h));
-  color:#fff;border:none;border-radius:var(--r);
-  font-size:14px;font-weight:700;cursor:pointer;
-  transition:all .2s;text-decoration:none;
-  box-shadow:0 4px 16px rgba(183,138,42,.4);letter-spacing:.02em;
-}
-.btn-app-large:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(183,138,42,.5);}
-.btn-app-large .abi{font-size:18px;}
-.btn-learn{
-  padding:15px 24px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);
-  border:1px solid rgba(255,255,255,.15);border-radius:var(--r);
-  font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;text-decoration:none;
-  display:inline-flex;align-items:center;gap:7px;
-}
-.btn-learn:hover{background:rgba(255,255,255,.13);color:#fff;}
+/* HOW */
+#how{padding:96px 5%;background:var(--cream-2)}
+.section-centre{text-align:center;max-width:600px;margin:0 auto 56px}
+.section-centre h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--ink);line-height:1.2;margin-bottom:12px;font-weight:700}
+.section-centre h2 em{color:var(--gold);font-style:italic}
+.section-centre p{color:var(--ink-3);font-size:.95rem;line-height:1.7;font-weight:300}
+.steps-row{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--white);box-shadow:var(--shadow)}
+@media(max-width:700px){.steps-row{grid-template-columns:1fr}}
+.step{padding:36px 30px;border-right:1px solid var(--border)}
+.step:last-child{border-right:none}
+.step-n{font-family:var(--mono);font-size:.7rem;color:var(--gold-deep);letter-spacing:.15em;margin-bottom:16px}
+.step-icon{font-size:2rem;display:block;margin-bottom:14px}
+.step h3{font-family:var(--serif);font-size:1.15rem;color:var(--ink);margin-bottom:10px;line-height:1.3;font-weight:600}
+.step p{font-size:.85rem;color:var(--ink-3);line-height:1.75;font-weight:300}
+.step-time{display:inline-block;margin-top:16px;padding:4px 12px;background:var(--gold-pale);border-radius:20px;font-size:.7rem;font-weight:600;color:var(--gold-deep);letter-spacing:.04em}
 
-/* ===== PROBLEM ===== */
-.problem{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;}
-.prob-card{
-  padding:32px 28px;border:1px solid var(--border);
-  border-radius:var(--r2);background:var(--surf);position:relative;overflow:hidden;
-  transition:all .22s;
-}
-.prob-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r2) var(--r2) 0 0;}
-.prob-card.employers::before{background:var(--terra);}
-.prob-card.workers::before{background:var(--gold);}
-.prob-card.agencies::before{background:var(--sage);}
-.prob-card:hover{box-shadow:var(--sh2);transform:translateY(-3px);}
-.prob-icon{font-size:32px;margin-bottom:16px;display:block;}
-.prob-who{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;}
-.prob-card.employers .prob-who{color:var(--terra);}
-.prob-card.workers .prob-who{color:var(--gold-d);}
-.prob-card.agencies .prob-who{color:var(--sage);}
-.prob-title{font-size:17px;font-weight:700;color:var(--charcoal);margin-bottom:16px;line-height:1.3;font-family:var(--serif);}
-.prob-list{list-style:none;display:flex;flex-direction:column;gap:9px;}
-.prob-list li{font-size:13px;color:var(--neutral-gray);line-height:1.5;padding-left:16px;position:relative;}
-.prob-list li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--border2);}
-.problem-stat{
-  margin-top:40px;padding:26px 32px;background:var(--charcoal);border-radius:var(--r2);
-  display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:24px;
-}
-.ps-item{text-align:center;}
-.ps-num{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--gold);font-style:italic;}
-.ps-lbl{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:4px;}
+/* COURSES */
+#courses{padding:96px 5%;background:var(--white)}
+.courses-head{max-width:1080px;margin:0 auto 44px}
+.courses-head h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--ink);line-height:1.2;margin-top:10px;font-weight:700}
+.courses-head h2 em{color:var(--gold);font-style:italic}
+.courses-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.courses-grid{grid-template-columns:1fr}}
+.course-card{padding:28px 26px;border:1px solid var(--border);border-radius:var(--radius);background:var(--cream);transition:all .22s}
+.course-card:hover{border-color:var(--gold-mid);background:var(--white);transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.cc-icon{font-size:2rem;display:block;margin-bottom:14px}
+.cc-track{font-size:.68rem;font-weight:600;color:var(--gold-deep);letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}
+.course-card h3{font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-bottom:9px;line-height:1.3;font-weight:600}
+.course-card p{font-size:.84rem;color:var(--ink-3);line-height:1.75;margin-bottom:18px;font-weight:300}
+.cc-meta{display:flex;flex-wrap:wrap;gap:14px}
+.cc-badge{font-size:.72rem;color:var(--ink-3);display:flex;align-items:center;gap:5px}
 
-/* ===== SOLUTION ===== */
-.solution{background:var(--warm-bg);}
-.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px;}
-.sol-card{
-  padding:26px 24px;background:var(--surf);border:1px solid var(--border);
-  border-radius:var(--r2);box-shadow:var(--sh);transition:all .22s;
-  position:relative;overflow:hidden;
-}
-.sol-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold-b),transparent);opacity:0;transition:opacity .22s;}
-.sol-card:hover{border-color:var(--gold-b);box-shadow:var(--sh3);transform:translateY(-3px);}
-.sol-card:hover::before{opacity:1;}
-.sol-icon{font-size:26px;margin-bottom:14px;display:block;}
-.sol-name{font-size:14px;font-weight:700;color:var(--charcoal);margin-bottom:6px;font-family:var(--serif);}
-.sol-desc{font-size:12px;color:var(--neutral-gray);line-height:1.65;}
+/* FOR WHOM */
+#for{padding:96px 5%;background:var(--cream-2)}
+.for-grid{max-width:1080px;margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--white);box-shadow:var(--shadow)}
+@media(max-width:800px){.for-grid{grid-template-columns:1fr}}
+.for-card{padding:36px 30px;border-right:1px solid var(--border);display:flex;flex-direction:column}
+.for-card:last-child{border-right:none}
+.for-icon{font-size:1.6rem;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0}
+.fi-a{background:var(--terra-pale)}
+.fi-b{background:var(--sage-pale)}
+.fi-c{background:var(--gold-pale)}
+.for-aud{font-size:.68rem;font-weight:600;color:var(--gold-deep);letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px}
+.for-card h3{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:10px;line-height:1.35;font-weight:600}
+.for-pain{font-size:.83rem;color:var(--terra);font-weight:500;padding-left:11px;border-left:2px solid var(--terra);margin-bottom:13px;line-height:1.5}
+.for-card p{font-size:.84rem;color:var(--ink-3);line-height:1.75;margin-bottom:14px;font-weight:300}
+.for-ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:20px;flex:1}
+.for-ul li{font-size:.82rem;color:var(--ink-3);display:flex;align-items:flex-start;gap:7px;font-weight:300}
+.for-ul li::before{content:'✓';color:var(--sage);font-weight:700;flex-shrink:0;margin-top:1px;font-size:.85rem}
+.for-cta{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:var(--gold-pale);color:var(--gold-deep);border-radius:var(--radius);font-size:.8rem;font-weight:600;transition:all .18s;width:fit-content;margin-top:auto}
+.for-cta:hover{background:var(--gold);color:var(--white)}
 
-/* ===== MARKET ===== */
-.market{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.market-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.market-stats{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
-.mstat{display:flex;align-items:center;gap:16px;padding:18px 22px;background:var(--warm-bg);border:1px solid var(--border);border-radius:var(--r2);}
-.mstat-bar-wrap{width:8px;height:52px;background:var(--border);border-radius:4px;overflow:hidden;flex-shrink:0;}
-.mstat-bar{width:100%;border-radius:4px;}
-.mstat.tam .mstat-bar{height:100%;background:var(--gold);}
-.mstat.sam .mstat-bar{height:66%;background:var(--gold-b);}
-.mstat.som .mstat-bar{height:26%;background:var(--gold-m);}
-.mstat-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--neutral-gray);margin-bottom:2px;}
-.mstat-num{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--charcoal);font-style:italic;line-height:1;}
-.mstat-sub{font-size:11px;color:var(--neutral-gray);margin-top:2px;}
-.market-highlights{display:flex;flex-direction:column;gap:14px;margin-top:32px;}
-.mh-item{display:flex;align-items:flex-start;gap:14px;padding:18px;background:var(--warm-bg);border:1px solid var(--border);border-radius:var(--r2);transition:all .2s;}
-.mh-item:hover{border-color:var(--gold-b);}
-.mh-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
-.mh-title{font-size:14px;font-weight:700;color:var(--charcoal);margin-bottom:3px;}
-.mh-desc{font-size:12px;color:var(--neutral-gray);line-height:1.55;}
+/* VIDEO */
+#demo{padding:96px 5%;background:var(--ink);position:relative;overflow:hidden}
+.demo-warm{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 50% 50%,rgba(183,138,42,.08) 0%,transparent 65%)}
+.demo-inner{max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.demo-inner .sec-tag{color:var(--gold-mid)}
+.demo-inner h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);margin:12px 0 14px;line-height:1.25;font-weight:700}
+.demo-inner h2 em{color:var(--gold-mid);font-style:italic}
+.demo-inner p{color:rgba(255,255,255,.45);font-size:.9rem;max-width:460px;margin:0 auto 36px;line-height:1.7;font-weight:300}
+.video-wrap{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 32px 80px rgba(0,0,0,.5)}
+.video-wrap iframe{width:100%;height:100%;display:block}
+.video-caption{margin-top:16px;font-size:.8rem;color:rgba(255,255,255,.25);font-style:italic}
 
-/* ===== BUSINESS MODEL ===== */
-.bizmodel{background:var(--warm-bg);}
-.bm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
-.bm-card{padding:30px 26px;background:var(--surf);border:1px solid var(--border);border-radius:var(--r2);box-shadow:var(--sh);}
-.bm-pct{font-family:var(--serif);font-size:42px;font-weight:700;color:var(--gold);font-style:italic;line-height:1;margin-bottom:12px;}
-.bm-name{font-size:15px;font-weight:700;color:var(--charcoal);margin-bottom:10px;font-family:var(--serif);}
-.bm-tiers{display:flex;flex-direction:column;gap:7px;}
-.bm-tier{font-size:12px;color:var(--neutral-gray);display:flex;align-items:baseline;gap:6px;}
-.bm-tier strong{color:var(--charcoal);font-weight:600;}
-.bm-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:40px;background:var(--border);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;}
-.bm-met{background:var(--surf);padding:22px 18px;text-align:center;}
-.bm-met-num{font-family:var(--serif);font-size:24px;font-style:italic;font-weight:700;color:var(--gold);line-height:1;margin-bottom:6px;}
-.bm-met-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--neutral-gray);}
+/* PLATFORM */
+#platform{padding:96px 5%;background:var(--cream-2)}
+.platform-inner{max-width:1080px;margin:0 auto}
+.platform-inner .section-centre{text-align:left;margin-left:0;margin-right:0;max-width:100%}
+.platform-shell{margin-top:48px;background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-2)}
+.pshell-bar{padding:12px 20px;background:var(--cream-3);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.pshell-dots{display:flex;gap:5px}
+.pshell-dots span{width:10px;height:10px;border-radius:50%}
+.d1{background:#FF5F57}.d2{background:#FEBC2E}.d3{background:#28C840}
+.pshell-url{font-family:var(--mono);font-size:.73rem;color:var(--ink-3);padding:3px 11px;background:var(--cream);border:1px solid var(--border);border-radius:5px}
+.pshell-link{font-size:.75rem;color:var(--gold-deep);font-weight:600;transition:color .15s}
+.pshell-link:hover{color:var(--gold)}
+.pshell-body{display:grid;grid-template-columns:200px 1fr;min-height:360px}
+@media(max-width:600px){.pshell-body{grid-template-columns:1fr}}
+.pshell-side{background:var(--cream);border-right:1px solid var(--border);padding:16px 0}
+.pshell-brand{padding:0 16px 14px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.pshell-wm{font-family:var(--serif);font-size:.95rem;color:var(--ink);font-weight:600}
+.pshell-wm em{color:var(--gold);font-style:italic}
+.pshell-sub{font-size:.6rem;color:var(--ink-4);letter-spacing:.18em;text-transform:uppercase;margin-top:3px}
+.psn{padding:8px 16px;font-size:.79rem;color:var(--ink-3);display:flex;align-items:center;gap:8px;transition:all .14s;cursor:default;font-weight:400}
+.psn:hover,.psn.on{color:var(--ink);background:var(--cream-2)}
+.psn.on{color:var(--gold-deep);border-right:2px solid var(--gold);font-weight:500}
+.psn .ni{font-size:.85rem;width:14px;text-align:center;flex-shrink:0}
+.pshell-main{padding:20px 24px}
+.psm-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.psm-title{font-size:.8rem;font-weight:600;color:var(--ink);letter-spacing:.04em}
+.psm-live{display:flex;align-items:center;gap:5px;font-size:.7rem;color:var(--ink-3)}
+.live-dot{width:5px;height:5px;border-radius:50%;background:#22C55E;animation:breathe 2s ease-in-out infinite}
+.psm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.psm-stat{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px}
+.psm-sl{font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
+.psm-sv{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1}
+.psm-stat.green .psm-sv{color:var(--sage)}
+.psm-courses{display:flex;flex-direction:column;gap:8px}
+.psm-course{background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);padding:11px 14px;display:flex;align-items:center;gap:12px}
+.psm-ci{font-size:1.2rem;flex-shrink:0}
+.psm-cn{font-size:.82rem;font-weight:500;color:var(--ink);margin-bottom:2px}
+.psm-cm{font-size:.7rem;color:var(--ink-3);font-weight:300}
+.psm-prog{width:80px;height:3px;background:var(--cream-3);border-radius:2px;overflow:hidden;flex-shrink:0}
+.psm-fill{height:100%;background:var(--gold);border-radius:2px}
+.platform-btns{text-align:center;margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-/* ===== FINANCIALS ===== */
-.financials{background:var(--surf);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.fin-table-wrap{margin-top:48px;border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh);}
-table.fin-table{width:100%;border-collapse:collapse;}
-.fin-table th{background:var(--charcoal);color:rgba(255,255,255,.6);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 20px;text-align:left;}
-.fin-table th.hl{color:var(--gold);}
-.fin-table td{padding:14px 20px;font-size:14px;border-bottom:1px solid var(--border);color:var(--charcoal2);}
-.fin-table tr:last-child td{border-bottom:none;}
-.fin-table tr:nth-child(even) td{background:var(--warm-bg);}
-.fin-table td.label{font-weight:600;color:var(--charcoal);}
-.fin-table td.y1{color:var(--gold);font-weight:700;}
-.fin-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px;}
-.fs-card{padding:22px 18px;border-radius:var(--r2);text-align:center;border:1px solid var(--border);background:var(--surf);}
-.fs-card.primary{background:var(--charcoal);border-color:var(--charcoal);}
-.fs-val{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold);font-style:italic;line-height:1;margin-bottom:6px;}
-.fs-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--neutral-gray);}
-.fs-card.primary .fs-lbl{color:rgba(255,255,255,.35);}
+/* TRACTION */
+#traction{padding:96px 5%;background:var(--white)}
+.traction-inner{max-width:1080px;margin:0 auto}
+.traction-inner h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--ink);line-height:1.2;margin:10px 0 0;font-weight:700}
+.traction-inner h2 em{color:var(--gold);font-style:italic}
+.traction-grid{margin-top:48px;display:grid;grid-template-columns:3fr 2fr;gap:40px;align-items:start}
+@media(max-width:768px){.traction-grid{grid-template-columns:1fr}}
+.trac-list{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--cream)}
+.trac-row{padding:14px 18px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--border);transition:background .14s}
+.trac-row:last-child{border-bottom:none}
+.trac-row:hover{background:var(--gold-pale)}
+.trac-check{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;flex-shrink:0}
+.tc-done{background:var(--sage-pale);border:1px solid rgba(45,106,82,.25)}
+.tc-prog{background:var(--gold-pale);border:1px solid var(--gold-mid)}
+.trac-label{font-size:.84rem;color:var(--ink-2);flex:1;font-weight:400}
+.trac-pill{font-size:.67rem;font-weight:600;padding:3px 9px;border-radius:12px;white-space:nowrap;letter-spacing:.04em}
+.tp-live{background:var(--sage-pale);color:var(--sage)}
+.tp-act{background:var(--gold-pale);color:var(--gold-deep)}
+.tp-wip{background:var(--cream-3);color:var(--ink-3)}
+.trac-nums{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tn-card{padding:22px 18px;background:var(--cream);border:1px solid var(--border);border-radius:var(--radius);text-align:center}
+.tn-big{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:6px}
+.tn-lbl{font-size:.7rem;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase;line-height:1.45}
 
-/* ===== VISION 2030 ===== */
-.vision{background:var(--warm-bg);}
-.vision-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px;}
-.v-card{display:flex;align-items:flex-start;gap:16px;padding:22px 20px;background:var(--surf);border:1px solid var(--border);border-radius:var(--r2);box-shadow:var(--sh);transition:all .2s;}
-.v-card:hover{border-color:var(--gold-b);box-shadow:var(--sh2);}
-.v-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
-.v-title{font-size:14px;font-weight:700;color:var(--charcoal);margin-bottom:5px;font-family:var(--serif);}
-.v-desc{font-size:12px;color:var(--neutral-gray);line-height:1.6;}
-.vision-badge{margin-top:32px;padding:20px 28px;background:var(--gold-l);border:1px solid var(--gold-b);border-radius:var(--r2);display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;}
-.vb-item{font-size:12px;font-weight:600;color:var(--gold-d);display:flex;align-items:center;gap:6px;}
-.vb-divider{width:1px;height:16px;background:var(--gold-b);}
+/* VISION */
+#vision{padding:72px 5%;background:var(--ink);position:relative;overflow:hidden}
+.vision-pattern{position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 26px,rgba(183,138,42,.05) 26px,rgba(183,138,42,.05) 27px)}
+.vision-in{position:relative;z-index:1;max-width:820px;margin:0 auto;text-align:center}
+.vision-in h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);margin-bottom:14px;line-height:1.3;font-weight:700}
+.vision-in p{color:rgba(255,255,255,.55);font-size:.92rem;max-width:540px;margin:0 auto 28px;line-height:1.75;font-weight:300}
+.vtags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.vtag{padding:6px 16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:22px;font-size:.76rem;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:.04em;transition:all .18s}
+.vtag:hover{background:rgba(183,138,42,.15);border-color:var(--gold-mid);color:var(--gold-mid)}
 
-/* ===== DEMO CTA ===== */
-.demo-cta{background:var(--charcoal);padding:80px 0;position:relative;overflow:hidden;}
-.demo-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 70% 50%,rgba(183,138,42,.18) 0%,transparent 65%);}
-.demo-cta::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;}
-.demo-cta-inner{max-width:var(--max);margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;position:relative;z-index:1;}
-.dci-eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.dci-title{font-family:var(--serif);font-size:clamp(26px,2.8vw,40px);font-style:italic;font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px;}
-.dci-sub{font-size:15px;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:28px;}
-.dci-items{display:flex;flex-direction:column;gap:11px;margin-bottom:28px;}
-.dci-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.6);}
-.dci-check{width:20px;height:20px;border-radius:50%;background:rgba(183,138,42,.2);border:1px solid rgba(183,138,42,.4);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--gold);flex-shrink:0;}
-.dci-try{display:flex;align-items:center;gap:10px;padding:16px 20px;background:rgba(183,138,42,.12);border:1px solid rgba(183,138,42,.25);border-radius:var(--r);}
-.dci-try-label{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px;}
-.dci-try-link{font-size:13px;font-weight:700;color:var(--gold);text-decoration:none;}
-.dci-try-link:hover{color:var(--gold-b);}
-.demo-cta-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r3);padding:36px 32px;backdrop-filter:blur(8px);}
-.field{margin-bottom:14px;}
-.field label{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:5px;}
-.field input,.field select,.field textarea{width:100%;padding:10px 12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);color:#fff;font-size:13px;outline:none;transition:all .2s;appearance:none;}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(183,138,42,.5);background:rgba(255,255,255,.1);box-shadow:0 0 0 3px rgba(183,138,42,.15);}
-.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.22);}
-.field select option{background:#1a1208;color:#fff;}
-.field textarea{resize:vertical;min-height:70px;line-height:1.5;}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.submit-btn{width:100%;padding:13px;background:var(--gold);color:#fff;border:none;border-radius:var(--r);font-size:13px;font-weight:700;letter-spacing:.03em;cursor:pointer;transition:all .18s;margin-top:4px;position:relative;overflow:hidden;}
-.submit-btn:hover{background:var(--gold-h);transform:translateY(-1px);box-shadow:0 4px 14px rgba(183,138,42,.4);}
-.submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none;}
-.form-trust{display:flex;align-items:center;gap:6px;font-size:10px;color:rgba(255,255,255,.22);margin-top:11px;justify-content:center;}
-.form-success{display:none;text-align:center;padding:20px 10px;}
-.form-success.show{display:block;}
-.form-success-icon{font-size:40px;margin-bottom:12px;}
-.form-success-title{font-family:var(--serif);font-size:18px;font-style:italic;color:#fff;margin-bottom:6px;}
-.form-success-sub{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;}
-.form-error{display:none;font-size:11px;color:#f87171;font-weight:600;margin-top:8px;}
-.form-error.show{display:block;}
-.form-header-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;font-family:var(--serif);}
-.form-header-sub{font-size:12px;color:rgba(255,255,255,.35);margin-bottom:22px;}
+/* CONTACT */
+#contact{padding:96px 5%;background:var(--cream-2)}
+.contact-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:768px){.contact-wrap{grid-template-columns:1fr}}
+.contact-left h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--ink);line-height:1.25;margin-bottom:14px;font-weight:700}
+.contact-left h2 em{color:var(--gold);font-style:italic}
+.contact-left p{color:var(--ink-3);line-height:1.8;margin-bottom:28px;font-size:.92rem;font-weight:300}
+.channels{display:flex;flex-direction:column;gap:10px}
+.channel{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);transition:all .18s}
+.channel:hover{border-color:var(--gold-mid);background:var(--gold-pale);transform:translateX(4px)}
+.ch-icon{font-size:1.2rem;flex-shrink:0}
+.ch-label{font-size:.67rem;font-weight:600;color:var(--gold-deep);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.ch-val{font-size:.86rem;color:var(--ink);font-weight:500}
+.form-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;box-shadow:var(--shadow)}
+.ff{margin-bottom:14px}
+.ff label{display:block;font-size:.68rem;font-weight:600;color:var(--ink-3);letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+.ff input,.ff select,.ff textarea{width:100%;padding:9px 13px;background:var(--cream);border:1.5px solid var(--border);border-radius:var(--radius);font-family:var(--sans);font-size:.88rem;color:var(--ink);outline:none;transition:border-color .14s;font-weight:400}
+.ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--gold);background:var(--white)}
+.ff textarea{resize:vertical;min-height:80px}
+.ff select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236B6560' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;cursor:pointer}
+.btn-submit{width:100%;padding:11px;background:var(--gold);color:var(--white);border:none;border-radius:var(--radius);font-family:var(--sans);font-size:.9rem;font-weight:600;transition:all .18s;letter-spacing:.02em}
+.btn-submit:hover{background:var(--gold-deep)}
+.form-note{text-align:center;font-size:.72rem;color:var(--ink-4);margin-top:9px}
+.form-err{display:none;padding:8px 12px;background:var(--terra-pale);border:1px solid rgba(184,64,48,.2);border-radius:var(--radius);font-size:.82rem;color:var(--terra);margin-bottom:12px}
+.form-ok{display:none;text-align:center;padding:32px 16px}
+.form-ok-icon{font-size:2.4rem;margin-bottom:10px}
+.form-ok h3{font-family:var(--serif);font-size:1.3rem;color:var(--ink);margin-bottom:7px;font-weight:600}
+.form-ok p{font-size:.85rem;color:var(--ink-3);font-weight:300}
 
-/* ===== FOOTER ===== */
-.footer{background:var(--surf);border-top:1px solid var(--border);padding:28px 0;}
-.footer-inner{max-width:var(--max);margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-.footer-brand{font-family:var(--serif);font-size:16px;color:var(--neutral-gray);font-weight:700;}
-.footer-brand em{color:var(--gold);font-style:italic;}
-.footer-links{display:flex;gap:24px;}
-.footer-link{font-size:12px;color:var(--neutral-gray);cursor:pointer;transition:color .15s;}
-.footer-link:hover{color:var(--charcoal);}
-.footer-copy{font-size:11px;color:var(--neutral-gray);}
+/* FOOTER */
+footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{max-width:1080px;margin:0 auto}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:36px;margin-bottom:36px;flex-wrap:wrap}
+.footer-brand .fb-name{font-family:var(--serif);font-size:1.2rem;color:var(--white);margin-bottom:6px;font-weight:600}
+.footer-brand .fb-name em{color:var(--gold-mid);font-style:italic}
+.footer-brand p{font-size:.78rem;color:rgba(255,255,255,.28);max-width:210px;line-height:1.65;margin-top:7px;font-weight:300}
+.footer-cols{display:flex;gap:44px;flex-wrap:wrap}
+.footer-col h4{font-size:.67rem;font-weight:600;color:rgba(255,255,255,.25);letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.footer-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.4);margin-bottom:7px;transition:color .15s;font-weight:300}
+.footer-col a:hover{color:var(--gold-mid)}
+.footer-bottom{padding-top:22px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:.75rem;color:rgba(255,255,255,.18);font-weight:300}
+.footer-tags{display:flex;gap:9px;flex-wrap:wrap}
+.footer-tag{font-size:.67rem;color:rgba(255,255,255,.18);padding:3px 9px;border:1px solid rgba(255,255,255,.07);border-radius:12px}
 
-/* ===== TOAST ===== */
-.toast{position:fixed;bottom:22px;right:22px;background:var(--surf);color:var(--charcoal);padding:13px 18px;border:1px solid var(--border);border-radius:var(--r2);font-size:13px;font-weight:500;box-shadow:var(--sh3);transform:translateY(80px);opacity:0;transition:all .32s cubic-bezier(.34,1.56,.64,1);z-index:999;display:flex;align-items:center;gap:10px;max-width:300px;}
-.toast.show{transform:translateY(0);opacity:1;}
-.toast.ok{border-left:3px solid var(--sage);}
-.toast.err{border-left:3px solid var(--terra);}
-
-/* ===== SCROLL REVEAL ===== */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-delay-1{transition-delay:.08s;}
-.reveal-delay-2{transition-delay:.16s;}
-.reveal-delay-3{transition-delay:.24s;}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:960px){
-  .wrap,.nav-inner,.hero-inner,.demo-cta-inner,.footer-inner{padding-left:24px;padding-right:24px;}
-  .hero-inner,.demo-cta-inner{grid-template-columns:1fr;gap:40px;}
-  .hero-photo-wrap{max-width:480px;margin:0 auto;}
-  .problem-grid,.solution-grid,.bm-grid{grid-template-columns:1fr 1fr;gap:16px;}
-  .market-inner{grid-template-columns:1fr;}
-  .vision-grid{grid-template-columns:1fr;}
-  .fin-summary{grid-template-columns:repeat(2,1fr);}
-  .bm-metrics{grid-template-columns:repeat(2,1fr);}
-  .nav-links{display:none;}
-  .app-band-inner{flex-direction:column;align-items:flex-start;}
-}
-@media(max-width:600px){
-  section{padding:56px 0;}
-  .hero{padding:0;}
-  .hero-inner{padding:48px 24px;}
-  .problem-grid,.solution-grid,.bm-grid{grid-template-columns:1fr;}
-  .hero-kpis{flex-wrap:wrap;gap:14px 0;}
-  .fin-summary{grid-template-columns:1fr 1fr;}
-  .row2{grid-template-columns:1fr;}
-  .hero-btns{flex-direction:column;align-items:flex-start;}
-  .ab-actions{flex-direction:column;align-items:stretch;width:100%;}
-  .hero-pill{display:none;}
-}
+/* TOAST */
+#toast{position:fixed;bottom:22px;right:22px;background:var(--ink);color:var(--white);padding:13px 18px;border-radius:var(--radius);font-size:.84rem;z-index:999;transform:translateY(80px);transition:transform .28s cubic-bezier(.34,1.56,.64,1);box-shadow:var(--shadow-2);max-width:280px;font-weight:400}
+#toast.show{transform:translateY(0)}
+#toast.ok{border-left:3px solid var(--sage)}
+#toast.err{border-left:3px solid var(--terra)}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav">
+<nav id="nav">
   <div class="nav-inner">
-    <a class="nav-brand" href="#">
-      <div class="nav-wm">Skill<em>Bridge</em> Arabia</div>
-      <div class="nav-sub">GCC Workforce Training Platform</div>
-    </a>
+    <a href="#hero" class="nav-logo">Skill<em>Bridge</em> Arabia</a>
     <div class="nav-links">
-      <a class="nav-link" href="#problem">The Problem</a>
-      <a class="nav-link" href="#solution">How It Works</a>
-      <a class="nav-link" href="#market">The Opportunity</a>
-      <a class="nav-link" href="#financials">Numbers</a>
-      <a class="nav-link" href="#vision">Vision 2030</a>
-    </div>
-    <div class="nav-actions">
-      <a class="btn-try" href="https://app.skillbridgearabia.com" target="_blank" rel="noopener">
-        &#9654; Try the Platform
-      </a>
-      <a class="nav-cta" href="#demo">Book a Demo &rarr;</a>
+      <a href="#how">How it works</a>
+      <a href="#courses">Courses</a>
+      <a href="#for">Partners</a>
+      <a href="#demo">Watch a lesson</a>
+      <a href="#contact">Contact</a>
+      <a href="https://app.skillbridgearabia.com" class="nav-cta" target="_blank">Try Platform →</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow"><div class="hero-edot"></div>Saudi Arabia &middot; EdTech &middot; B2B</div>
-      <h1 class="hero-h1">
-        Every year, 120,000 workers<br>
-        arrive in Saudi coffee shops
-        <span class="line3">with no training at all.</span>
-      </h1>
-      <div class="hero-rule"></div>
-      <p class="hero-desc">
-        SkillBridge Arabia gives them what they need before they land. Barista skills, 
-        workplace Arabic, food safety, customer service — all on their phone, all certified, 
-        all aligned with Saudi Vision 2030. And for employers, it means workers who are 
-        <strong>ready on day one</strong> rather than learning on the job for weeks.
-      </p>
-      <div class="hero-btns">
-        <a class="btn-primary" href="#demo">Book an Investor Demo &rarr;</a>
-        <a class="btn-app" href="https://app.skillbridgearabia.com" target="_blank" rel="noopener">
-          <span class="btn-app-icon">&#9654;</span> Try the Platform
+<section id="hero">
+  <div class="hero-ornament"></div>
+  <div class="hero-ornament-2"></div>
+  <div class="hero-inner container">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Vision 2030 · EdTech · Riyadh, KSA</div>
+      <h1>Your skills.<br><em>Your future</em><br><span class="muted">in the Gulf.</span></h1>
+      <p class="hero-body">Every year <strong>120,000 workers</strong> leave Bangladesh, India and Nepal for Saudi Arabia's cafés and hotels with zero training and no Arabic. SkillBridge Arabia certifies them <strong>before they board the flight</strong> — on their phone, in their language, free of charge.</p>
+      <div class="hero-actions">
+        <a href="https://app.skillbridgearabia.com" class="btn-primary" target="_blank">☕ Try the Platform</a>
+        <a href="#contact" class="btn-outline">Partner with us →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stat-card">
+        <div class="hsc-num">850,000</div>
+        <div class="hsc-lbl">F&amp;B expat workers in Saudi Arabia</div>
+        <div class="hsc-sub">The market we are building for</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hsc-num">60%</div>
+        <div class="hsc-lbl">Arrive with no formal skills or training</div>
+        <div class="hsc-sub">The problem we are solving</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hsc-num">SAR 0</div>
+        <div class="hsc-lbl">Cost to the worker. Always and forever.</div>
+        <div class="hsc-sub">Our commitment to the people we serve</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="mission-stripe"></div>
+  <div class="mission-inner">
+    <p>Every year 120,000 workers arrive in Saudi Arabia's coffee shops with <em>zero training and no Arabic.</em> We fix that — on their phone, before they land.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-wrap container">
+    <div class="story-left">
+      <div class="sec-tag">The Worker's Journey</div>
+      <span class="section-rule"></span>
+      <h2>They leave home with a dream.<br><em>We make sure they arrive ready.</em></h2>
+      <p>A barista from Dhaka. A hospitality worker from Kathmandu. A front liner from Mumbai. They leave their families and communities for a two-year contract in a Saudi café.</p>
+      <p>They arrive speaking no Arabic. They have never used a commercial espresso machine. They do not know Saudi food safety law. Their employer expects them <strong>ready on Day 1.</strong></p>
+      <p>SkillBridge Arabia is the training they complete <strong>before they board the plane.</strong> On their phone. In Bengali, Hindi, Nepali or English. Certified by the time they land.</p>
+      <div class="story-pull">
+        <q>That certificate is not just a piece of paper. It is proof that you came prepared. And proof that you are worth more.</q>
+        <cite>Arjun, SkillBridge Arabia Barista Programme</cite>
+      </div>
+    </div>
+    <div class="origin-cards">
+      <div class="origin-card">
+        <div class="origin-flag">🇧🇩</div>
+        <div class="origin-info"><div class="oc">Bangladesh</div><div class="od">Approximately 80,000 F&amp;B workers travel to Saudi Arabia each year. Bengali language support available. Dhaka agency network confirmed.</div></div>
+      </div>
+      <div class="origin-card">
+        <div class="origin-flag">🇮🇳</div>
+        <div class="origin-info"><div class="oc">India</div><div class="od">Approximately 120,000 F&amp;B workers travel to Saudi Arabia each year. Hindi language support available. Kerala hospitality community.</div></div>
+      </div>
+      <div class="origin-card">
+        <div class="origin-flag">🇳🇵</div>
+        <div class="origin-info"><div class="oc">Nepal</div><div class="od">Approximately 40,000 F&amp;B workers travel to Saudi Arabia each year. Nepali language support available. Community referral model.</div></div>
+      </div>
+      <div class="origin-card">
+        <div class="origin-flag">🇵🇭</div>
+        <div class="origin-info"><div class="oc">Philippines</div><div class="od">Approximately 25,000 F&amp;B workers travel to Saudi Arabia each year. English primary. Hospitality-trained workforce.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-centre">
+    <div class="sec-tag">The Process</div>
+    <span class="section-rule" style="margin:0 auto 20px"></span>
+    <h2>Three steps from home<br><em>to certified</em></h2>
+    <p>The agency enrols the worker. The worker trains at home on their phone. The employer receives a certified candidate before the visa is stamped.</p>
+  </div>
+  <div class="steps-row container">
+    <div class="step">
+      <div class="step-n">01 / Agency</div>
+      <span class="step-icon">📋</span>
+      <h3>Agency enrols the worker</h3>
+      <p>The recruitment agency adds the candidate to their SkillBridge dashboard with a name, email and target role. The worker receives a login link immediately. Two minutes per worker. Progress is visible in real time.</p>
+      <span class="step-time">Two minutes to enrol</span>
+    </div>
+    <div class="step">
+      <div class="step-n">02 / Worker</div>
+      <span class="step-icon">📱</span>
+      <h3>Worker trains on their phone</h3>
+      <p>Thirty hours of video lessons, quizzes and language modules at their own pace, in their own language, at home before departure. The agency and employer see live progress throughout.</p>
+      <span class="step-time">Typically two to four weeks</span>
+    </div>
+    <div class="step">
+      <div class="step-n">03 / Employer</div>
+      <span class="step-icon">🏆</span>
+      <h3>Certified candidate arrives</h3>
+      <p>The worker passes the final exam. A QR-verified certificate is generated instantly. The employer verifies it in seconds. The worker starts on Day 1 skilled, SFDA-compliant and with working Arabic.</p>
+      <span class="step-time">Certificate instant on pass</span>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="courses-head container">
+    <div class="sec-tag">Certified Curriculum</div>
+    <span class="section-rule"></span>
+    <h2>Four tracks.<br><em>One platform.</em> Every device.</h2>
+  </div>
+  <div class="courses-grid container">
+    <div class="course-card">
+      <span class="cc-icon">☕</span>
+      <div class="cc-track">Track 1 · SCA Aligned</div>
+      <h3>Barista Professional Programme</h3>
+      <p>Coffee origins, espresso mastery, milk science, the full drinks menu and Saudi customer service culture. Built for the KSA specialty café market and endorsed by SCA curriculum standards.</p>
+      <div class="cc-meta">
+        <span class="cc-badge">30 hours</span>
+        <span class="cc-badge">12 lessons</span>
+        <span class="cc-badge">SCA-aligned certificate</span>
+      </div>
+    </div>
+    <div class="course-card">
+      <span class="cc-icon">🗣️</span>
+      <div class="cc-track">Track 2 · Language</div>
+      <h3>Arabic for Hospitality</h3>
+      <p>Over 50 essential Arabic phrases for café and hotel work. Greetings, taking orders, handling complaints and payment language. Vision 2030 service ratings directly reward Arabic-speaking expat staff.</p>
+      <div class="cc-meta">
+        <span class="cc-badge">15 hours</span>
+        <span class="cc-badge">8 lessons</span>
+        <span class="cc-badge">Gulf Arabic focus</span>
+      </div>
+    </div>
+    <div class="course-card">
+      <span class="cc-icon">🌟</span>
+      <div class="cc-track">Track 3 · Service Excellence</div>
+      <h3>Front Liner Excellence</h3>
+      <p>Saudi customer expectations, Vision 2030 service benchmarks, natural upselling, complaint resolution and de-escalation. Mystery shoppers score major chains — preparation matters.</p>
+      <div class="cc-meta">
+        <span class="cc-badge">20 hours</span>
+        <span class="cc-badge">10 lessons</span>
+        <span class="cc-badge">Vision 2030 rated</span>
+      </div>
+    </div>
+    <div class="course-card">
+      <span class="cc-icon">🏢</span>
+      <div class="cc-track">Track 4 · Compliance</div>
+      <h3>GCC Workplace Readiness</h3>
+      <p>Saudi Labour Law, worker rights, SFDA food safety compliance, MHRSD requirements, GOSI registration and Nitaqat awareness. Every expat worker entering Saudi Arabia needs this knowledge.</p>
+      <div class="cc-meta">
+        <span class="cc-badge">10 hours</span>
+        <span class="cc-badge">6 lessons</span>
+        <span class="cc-badge">MHRSD aligned</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHOM -->
+<section id="for">
+  <div class="section-centre container">
+    <div class="sec-tag">Who It Serves</div>
+    <span class="section-rule" style="margin:0 auto 20px"></span>
+    <h2>Built for three audiences.<br><em>Essential for all three.</em></h2>
+    <p>One platform. Three completely different problems solved at the same time.</p>
+  </div>
+  <div class="for-grid container">
+    <div class="for-card">
+      <div class="for-icon fi-a">🏢</div>
+      <div class="for-aud">Recruitment Agencies</div>
+      <h3>Certified workers. Fewer failures. Better margins.</h3>
+      <div class="for-pain">Workers fail on arrival, re-recruitment costs SAR 1,500 and clients are lost</div>
+      <p>SAR 225 to certify one worker. One prevented re-recruitment pays for six certifications. Agencies that send certified workers win the premium tier of the market.</p>
+      <ul class="for-ul">
+        <li>Agency dashboard showing every worker in real time</li>
+        <li>QR-verified certificates that employers trust instantly</li>
+        <li>Competitive edge over uncertified candidates</li>
+        <li>Start with five workers free, no contract required</li>
+      </ul>
+      <a href="#contact" class="for-cta">Start a free pilot →</a>
+    </div>
+    <div class="for-card">
+      <div class="for-icon fi-b">☕</div>
+      <div class="for-aud">Coffee Shops and Employers</div>
+      <h3>Day 1 ready. No remedial onboarding required.</h3>
+      <div class="for-pain">Forty percent turnover within 90 days for untrained workers</div>
+      <p>Your new hire completed 30 hours of training before they arrived. You saw their certificate before the interview. The first week is productive rather than remedial.</p>
+      <ul class="for-ul">
+        <li>See progress live before the worker arrives in Saudi Arabia</li>
+        <li>SFDA food safety compliance already completed</li>
+        <li>Working Arabic hospitality language from Day 1</li>
+        <li>Lower turnover, faster onboarding, happier guests</li>
+      </ul>
+      <a href="#contact" class="for-cta">Train your team →</a>
+    </div>
+    <div class="for-card">
+      <div class="for-icon fi-c">👷</div>
+      <div class="for-aud">Workers</div>
+      <h3>Your certificate changes the conversation before you arrive.</h3>
+      <div class="for-pain">No Arabic, no skills, no certification, no career path</div>
+      <p>Certified workers in Saudi Arabia earn 50 to 100 percent more than uncertified workers in the same role. On a two-year contract, that difference is life-changing for your family.</p>
+      <ul class="for-ul">
+        <li>Completely free for workers, no cost ever</li>
+        <li>Train on your phone at home before departure</li>
+        <li>Bengali, Hindi, Nepali and English available</li>
+        <li>QR-verified certificate recognised by Saudi employers</li>
+      </ul>
+      <a href="https://app.skillbridgearabia.com" class="for-cta" target="_blank">Start learning free →</a>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="demo">
+  <div class="demo-warm"></div>
+  <div class="demo-inner container">
+    <div class="sec-tag">Watch a Lesson</div>
+    <h2>See how workers learn<br><em>before they arrive</em></h2>
+    <p>This is what a worker in Dhaka or Kathmandu watches on their phone tonight. Lesson 1 of the Barista Professional Programme.</p>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/Oqq4jY4Ke6s?rel=0&modestbranding=1" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+    </div>
+    <p class="video-caption">Lesson 1, Welcome to SkillBridge Arabia, Barista Professional Programme, English with Arabic phrases woven throughout</p>
+  </div>
+</section>
+
+<!-- PLATFORM -->
+<section id="platform">
+  <div class="platform-inner container">
+    <div class="section-centre" style="text-align:left;max-width:100%">
+      <div class="sec-tag">The Platform</div>
+      <span class="section-rule"></span>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--ink);line-height:1.2;margin-top:10px;font-weight:700">What workers and<br><em style="color:var(--gold);font-style:italic">employers experience</em></h2>
+      <p style="color:var(--ink-3);font-size:.95rem;line-height:1.7;margin-top:12px;font-weight:300">Real courses. Real progress tracking. Real certificates. Try it now with a demo account, no sign-up required.</p>
+    </div>
+    <div class="platform-shell">
+      <div class="pshell-bar">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div class="pshell-dots"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+          <div class="pshell-url">app.skillbridgearabia.com</div>
+        </div>
+        <a href="https://app.skillbridgearabia.com" target="_blank" class="pshell-link">Open live platform →</a>
+      </div>
+      <div class="pshell-body">
+        <div class="pshell-side">
+          <div class="pshell-brand">
+            <div class="pshell-wm">Skill<em>Bridge</em></div>
+            <div class="pshell-sub">Worker Portal</div>
+          </div>
+          <div class="psn on"><span class="ni">📊</span>My Dashboard</div>
+          <div class="psn"><span class="ni">📚</span>Course Catalogue</div>
+          <div class="psn"><span class="ni">🤖</span>AI Coach</div>
+          <div class="psn"><span class="ni">🏆</span>Certificates</div>
+          <div class="psn"><span class="ni">👤</span>My Profile</div>
+        </div>
+        <div class="pshell-main">
+          <div class="psm-top">
+            <div class="psm-title">Dashboard</div>
+            <div class="psm-live"><div class="live-dot"></div>14 active learners</div>
+          </div>
+          <div class="psm-stats">
+            <div class="psm-stat"><div class="psm-sl">Enrolled</div><div class="psm-sv">2</div></div>
+            <div class="psm-stat green"><div class="psm-sl">Certified</div><div class="psm-sv">1</div></div>
+            <div class="psm-stat"><div class="psm-sl">Progress</div><div class="psm-sv">68%</div></div>
+            <div class="psm-stat"><div class="psm-sl">Lessons</div><div class="psm-sv">8</div></div>
+          </div>
+          <div class="psm-courses">
+            <div class="psm-course">
+              <div class="psm-ci">☕</div>
+              <div style="flex:1"><div class="psm-cn">Barista Professional Programme</div><div class="psm-cm">30 hours · 12 lessons · SCA Aligned</div></div>
+              <div class="psm-prog"><div class="psm-fill" style="width:68%"></div></div>
+            </div>
+            <div class="psm-course">
+              <div class="psm-ci">🗣️</div>
+              <div style="flex:1"><div class="psm-cn">Arabic for Hospitality</div><div class="psm-cm">15 hours · 8 lessons</div></div>
+              <div class="psm-prog"><div class="psm-fill" style="width:22%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="platform-btns">
+      <a href="https://app.skillbridgearabia.com" class="btn-primary" target="_blank">Try as Worker →</a>
+      <a href="https://app.skillbridgearabia.com" class="btn-outline" target="_blank">Try as Employer →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRACTION -->
+<section id="traction">
+  <div class="traction-inner container">
+    <div class="sec-tag">Where We Are</div>
+    <span class="section-rule"></span>
+    <h2>Built and launching.<br><em>Not a concept.</em></h2>
+    <div class="traction-grid">
+      <div class="trac-list">
+        <div class="trac-row"><div class="trac-check tc-done">✅</div><div class="trac-label">Live platform at app.skillbridgearabia.com</div><span class="trac-pill tp-live">Live</span></div>
+        <div class="trac-row"><div class="trac-check tc-done">✅</div><div class="trac-label">Barista Professional Programme, 12 lessons in production</div><span class="trac-pill tp-act">Building</span></div>
+        <div class="trac-row"><div class="trac-check tc-done">✅</div><div class="trac-label">AI video presenter, South Asian, bilingual English and Arabic</div><span class="trac-pill tp-live">Live</span></div>
+        <div class="trac-row"><div class="trac-check tc-done">✅</div><div class="trac-label">Recruitment agencies from Bangladesh, India and Nepal confirmed</div><span class="trac-pill tp-act">Active</span></div>
+        <div class="trac-row"><div class="trac-check tc-done">✅</div><div class="trac-label">Tech co-founder joining, product build underway</div><span class="trac-pill tp-act">Active</span></div>
+        <div class="trac-row"><div class="trac-check tc-done">✅</div><div class="trac-label">TalentLMS learning platform subscribed and configured</div><span class="trac-pill tp-live">Live</span></div>
+        <div class="trac-row"><div class="trac-check tc-prog">🔄</div><div class="trac-label">TVTC approval, Saudi certification pathway</div><span class="trac-pill tp-wip">In progress</span></div>
+        <div class="trac-row"><div class="trac-check tc-prog">🔄</div><div class="trac-label">HRDF eligibility, government funding pathway</div><span class="trac-pill tp-wip">In progress</span></div>
+      </div>
+      <div class="trac-nums">
+        <div class="tn-card"><div class="tn-big">$25.99B</div><div class="tn-lbl">Saudi F&amp;B market 2026</div></div>
+        <div class="tn-card"><div class="tn-big">$67M</div><div class="tn-lbl">Serviceable market</div></div>
+        <div class="tn-card"><div class="tn-big">85%</div><div class="tn-lbl">Target gross margin</div></div>
+        <div class="tn-card"><div class="tn-big">Month 4</div><div class="tn-lbl">Projected break-even</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="vision-pattern"></div>
+  <div class="vision-in container">
+    <h2>Aligned with Saudi Vision 2030's human capital agenda</h2>
+    <p>SkillBridge Arabia directly supports Saudi Arabia's goal of a skilled, productive and compliant frontline workforce across the hospitality and F&amp;B sector.</p>
+    <div class="vtags">
+      <span class="vtag">HRDF Eligible</span>
+      <span class="vtag">TVTC Pathway</span>
+      <span class="vtag">MHRSD Aligned</span>
+      <span class="vtag">SCA Curriculum</span>
+      <span class="vtag">SFDA Compliant</span>
+      <span class="vtag">Nitaqat Aware</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrap container">
+    <div class="contact-left">
+      <div class="sec-tag">Get in Touch</div>
+      <span class="section-rule"></span>
+      <h2>Ready to partner or<br><em>start a pilot?</em></h2>
+      <p>Whether you are a recruitment agency, an employer, an investor or a worker ready to start, we want to hear from you. We respond within 24 hours.</p>
+      <div class="channels">
+        <a href="mailto:hello@skillbridgearabia.com" class="channel">
+          <span class="ch-icon">✉️</span>
+          <div><div class="ch-label">Email</div><div class="ch-val">hello@skillbridgearabia.com</div></div>
+        </a>
+        <a href="https://app.skillbridgearabia.com" class="channel" target="_blank">
+          <span class="ch-icon">🚀</span>
+          <div><div class="ch-label">Platform</div><div class="ch-val">app.skillbridgearabia.com</div></div>
+        </a>
+        <a href="https://skillbridgearabia.com/investor" class="channel">
+          <span class="ch-icon">📊</span>
+          <div><div class="ch-label">Investor Deck</div><div class="ch-val">skillbridgearabia.com/investor</div></div>
         </a>
       </div>
-      <div class="hero-kpis">
-        <div class="hk"><div class="hk-num">850K</div><div class="hk-lbl">F&amp;B Workers in KSA</div></div>
-        <div class="hk"><div class="hk-num">$67M</div><div class="hk-lbl">Our Target Market</div></div>
-        <div class="hk"><div class="hk-num">85%</div><div class="hk-lbl">Gross Margin</div></div>
-        <div class="hk"><div class="hk-num">Month 4</div><div class="hk-lbl">Break-Even Point</div></div>
-      </div>
     </div>
-
-    <!-- HERO PHOTO -->
-    <div class="hero-photo-wrap">
-      <div class="hero-photo">
-        <!-- Real photo: two F&B workers (barista + manager) looking at phone together -->
-        <!-- Replace src with an actual photo URL when available -->
-        <div class="hero-photo-fallback">
-          <div class="hpf-scene">
-            <div class="hpf-person" style="margin-bottom:0">
-              <div class="hpf-head" style="background:rgba(183,138,42,.15);border:2px solid rgba(183,138,42,.3);">&#128104;</div>
-              <div class="hpf-body" style="background:rgba(43,43,43,.8);color:rgba(183,138,42,.8);width:40px;height:56px;border-radius:12px 12px 4px 4px;border:1px solid rgba(183,138,42,.2);display:flex;align-items:center;justify-content:center;font-size:18px;">&#127911;</div>
-            </div>
-            <div style="position:relative;width:60px">
-              <div class="hpf-phone" style="position:relative;width:60px;height:90px;background:rgba(255,255,255,.06);border:2px solid rgba(183,138,42,.4);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto;">
-                &#128241;
-              </div>
-            </div>
-            <div class="hpf-person" style="margin-bottom:0">
-              <div class="hpf-head" style="background:rgba(183,138,42,.15);border:2px solid rgba(183,138,42,.3);">&#128105;</div>
-              <div class="hpf-body" style="background:rgba(45,106,82,.3);color:rgba(168,212,192,.9);width:40px;height:56px;border-radius:12px 12px 4px 4px;border:1px solid rgba(45,106,82,.3);display:flex;align-items:center;justify-content:center;font-size:18px;">&#127959;</div>
-            </div>
-          </div>
-          <div style="text-align:center;margin-top:8px">
-            <div style="font-family:var(--serif);font-size:16px;font-style:italic;color:rgba(255,255,255,.7);margin-bottom:6px">Learning before landing.</div>
-            <div style="font-size:12px;color:rgba(183,138,42,.7);">SkillBridge Arabia &mdash; On your phone, before you land</div>
-          </div>
-          <div style="margin-top:16px;padding:10px 16px;background:rgba(183,138,42,.1);border:1px solid rgba(183,138,42,.25);border-radius:8px;text-align:center">
-            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(183,138,42,.7);margin-bottom:3px">Demo Platform Live</div>
-            <a href="https://app.skillbridgearabia.com" target="_blank" style="font-size:12px;color:var(--gold);font-weight:700;text-decoration:none;">Try it now &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="hero-pill hero-pill-1">
-        <div class="hp-label">Active Learners</div>
-        <div class="hp-val">1,247</div>
-        <div class="hp-sub">&#128200; +34% this month</div>
-      </div>
-      <div class="hero-pill hero-pill-2">
-        <div class="hp-label">Certificates Issued</div>
-        <div class="hp-val">847</div>
-        <div class="hp-sub">&#9989; HRDF Verified</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRY APP BAND -->
-<div class="app-band">
-  <div class="app-band-inner">
-    <div class="abl">
-      <div class="ab-eyebrow">&#9654; The Platform Is Already Live</div>
-      <div class="ab-title">Want to see what workers actually experience?</div>
-      <div class="ab-sub">Walk through a real lesson, try the Arabic coach, complete a quiz and see your certificate. No account needed, takes about three minutes.</div>
-    </div>
-    <div class="ab-actions">
-      <a class="btn-app-large" href="https://app.skillbridgearabia.com" target="_blank" rel="noopener">
-        <span class="abi">&#9654;</span> Open the Platform
-      </a>
-      <a class="btn-learn" href="#demo">Book a Guided Demo</a>
-    </div>
-  </div>
-</div>
-
-<!-- PROBLEM -->
-<section class="problem" id="problem">
-  <div class="wrap">
-    <div class="sec-eyebrow"><div class="sec-edot"></div>The Problem</div>
-    <h2 class="sec-title reveal">A workforce that arrives <em>unprepared,</em> every single year.</h2>
-    <p class="sec-sub reveal">Six in ten expat workers who join Saudi Arabia&rsquo;s food and beverage sector have no formal training. There is no scalable way to fix that before they land. Until now.</p>
-    <div class="problem-grid">
-      <div class="prob-card employers reveal reveal-delay-1">
-        <span class="prob-icon">&#127970;</span>
-        <div class="prob-who">For Employers</div>
-        <div class="prob-title">Weeks of onboarding that should not be necessary</div>
-        <ul class="prob-list">
-          <li>Two to four weeks training every new hire from scratch</li>
-          <li>Language barriers making service inconsistent daily</li>
-          <li>Four in ten workers leave within the first 90 days</li>
-          <li>No way to verify skills before someone starts</li>
-          <li>The same problems repeating with every new intake</li>
-        </ul>
-      </div>
-      <div class="prob-card workers reveal reveal-delay-2">
-        <span class="prob-icon">&#128104;</span>
-        <div class="prob-who">For Workers</div>
-        <div class="prob-title">Starting a new life with nothing to show for it</div>
-        <ul class="prob-list">
-          <li>Arriving with no certified skills on paper</li>
-          <li>No Arabic, no English, no way to communicate well</li>
-          <li>Uncertified workers earn 50 to 100% less than certified ones in the same role</li>
-          <li>No clear path to better positions or higher pay</li>
-          <li>Vulnerable from day one, often without proper documentation</li>
-        </ul>
-      </div>
-      <div class="prob-card agencies reveal reveal-delay-3">
-        <span class="prob-icon">&#128203;</span>
-        <div class="prob-who">For Agencies</div>
-        <div class="prob-title">Failed placements that damage everyone&rsquo;s reputation</div>
-        <ul class="prob-list">
-          <li>A worker without their MHRSD food safety certificate cannot legally work — the placement fails entirely</li>
-          <li>Nothing to separate a quality candidate from the rest</li>
-          <li>Client complaints that are hard to address without a systemic fix</li>
-          <li>Revenue lost every time a placement falls through</li>
-          <li>Saudization pressure making skilled, compliant expat candidates more valuable than ever</li>
-        </ul>
-      </div>
-    </div>
-    <div class="problem-stat reveal">
-      <div class="ps-item"><div class="ps-num">60%</div><div class="ps-lbl">arrive with no formal skills</div></div>
-      <div class="ps-item"><div class="ps-num">$200+</div><div class="ps-lbl">cost to re-recruit one failed hire</div></div>
-      <div class="ps-item"><div class="ps-num">120K</div><div class="ps-lbl">new workers entering KSA F&amp;B each year</div></div>
-      <div class="ps-item"><div class="ps-num">0</div><div class="ps-lbl">digital training solutions exist today</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section class="solution" id="solution">
-  <div class="wrap">
-    <div class="sec-eyebrow"><div class="sec-edot"></div>How It Works</div>
-    <h2 class="sec-title reveal">Workers learn on their phones <em>before they land.</em> Employers track every step.</h2>
-    <p class="sec-sub reveal">SkillBridge Arabia is a mobile training platform built entirely around the realities of this industry. Short lessons, practical skills, bilingual content and certificates that employers actually recognise.</p>
-    <div class="solution-grid">
-      <div class="sol-card reveal reveal-delay-1"><span class="sol-icon">&#127959;</span><div class="sol-name">Certified Skills Courses</div><div class="sol-desc">Barista, front of house, kitchen helper and retail staff programmes, each built around SCA standards and the Saudi hospitality market.</div></div>
-      <div class="sol-card reveal reveal-delay-2"><span class="sol-icon">&#128483;&#65039;</span><div class="sol-name">Arabic for the Workplace</div><div class="sol-desc">The phrases workers actually need: taking orders, handling complaints, greeting customers, understanding their rights. Practical from lesson one.</div></div>
-      <div class="sol-card reveal reveal-delay-3"><span class="sol-icon">&#128241;</span><div class="sol-name">Fully Mobile, Four Languages</div><div class="sol-desc">Workers start learning in Bangladesh, India or Nepal before they ever board a flight. iOS, Android and web, in English, Arabic, Bengali and Hindi.</div></div>
-      <div class="sol-card reveal reveal-delay-1"><span class="sol-icon">&#128201;</span><div class="sol-name">Employer Dashboard</div><div class="sol-desc">See exactly where each worker is in their training, which lessons they have completed and which certificates they have earned. All in one place.</div></div>
-      <div class="sol-card reveal reveal-delay-2"><span class="sol-icon">&#127942;</span><div class="sol-name">Verifiable Certificates</div><div class="sol-desc">Each certificate carries a QR code so any employer can verify it instantly. Includes MHRSD food safety compliance, aligned with HRDF and Saudi Vision 2030.</div></div>
-      <div class="sol-card reveal reveal-delay-3"><span class="sol-icon">&#129302;</span><div class="sol-name">AI Arabic Coach</div><div class="sol-desc">Workers can practise Arabic conversation at any time of day. The coach gives instant feedback and adapts to their specific role and level.</div></div>
-      <div class="sol-card reveal reveal-delay-1"><span class="sol-icon">&#127807;</span><div class="sol-name">Sustainable Service</div><div class="sol-desc">Every programme includes a module on waste reduction, plastic regulations and green kitchen practice. Built for where Saudi F&amp;B regulations are heading, not just where they are today.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- MARKET -->
-<section class="market" id="market">
-  <div class="wrap">
-    <div class="market-inner">
-      <div>
-        <div class="sec-eyebrow"><div class="sec-edot"></div>The Opportunity</div>
-        <h2 class="sec-title reveal">A large market that nobody has <em>thought to serve properly.</em></h2>
-        <div class="market-stats">
-          <div class="mstat tam reveal"><div class="mstat-bar-wrap"><div class="mstat-bar"></div></div><div><div class="mstat-label">Saudi food service market in 2026</div><div class="mstat-num">$25.99 billion</div><div class="mstat-sub">Growing at 11.6% a year, driven by QSR and specialty coffee expansion</div></div></div>
-          <div class="mstat sam reveal reveal-delay-1"><div class="mstat-bar-wrap"><div class="mstat-bar"></div></div><div><div class="mstat-label">Our addressable market within that</div><div class="mstat-num">$67M per year</div><div class="mstat-sub">850,000 F&amp;B expat workers who need training before they start</div></div></div>
-          <div class="mstat som reveal reveal-delay-2"><div class="mstat-bar-wrap"><div class="mstat-bar"></div></div><div><div class="mstat-label">Year one target, under 0.5% of our focus market</div><div class="mstat-num">$175K</div><div class="mstat-sub">2,500 workers trained, growing to 35,000 by year three</div></div></div>
-        </div>
-      </div>
-      <div>
-        <div class="sec-eyebrow" style="margin-top:0"><div class="sec-edot"></div>Why Now</div>
-        <div class="market-highlights">
-          <div class="mh-item reveal"><span class="mh-icon">&#9749;</span><div><div class="mh-title">The Saudi food service sector is worth $25.99 billion and accelerating</div><div class="mh-desc">Over 3,500 new coffee shops registered in KSA in 2024 alone. The QSR segment is growing fastest. Every single one of those businesses needs trained staff and almost none of them have a reliable way to get them.</div></div></div>
-          <div class="mh-item reveal reveal-delay-1"><span class="mh-icon">&#128104;&#8205;&#127979;</span><div><div class="mh-title">120,000 new F&amp;B workers enter Saudi Arabia every year, most of them unprepared</div><div class="mh-desc">They arrive without food safety certificates, without Arabic, without any proof of skill. MHRSD and Balady regulations require those certificates. The gap between what workers have and what the law demands is our market.</div></div></div>
-          <div class="mh-item reveal reveal-delay-2"><span class="mh-icon">&#127464;&#127462;</span><div><div class="mh-title">Nobody has built this for this market before</div><div class="mh-desc">We have done the research. There is no digital platform targeting pre-arrival training for GCC frontline expat workers. That will not be true for long, which is why moving now matters.</div></div></div>
-          <div class="mh-item reveal reveal-delay-3"><span class="mh-icon">&#128200;</span><div><div class="mh-title">Saudization pressure is making trained expats more valuable, not less</div><div class="mh-desc">As Nitaqat quotas tighten for management roles, frontline positions remain expat-reliant. Agencies that can send certified, compliant candidates command better fees and lose fewer placements.</div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BUSINESS MODEL -->
-<section class="bizmodel" id="model">
-  <div class="wrap">
-    <div class="sec-eyebrow"><div class="sec-edot"></div>The Business Model</div>
-    <h2 class="sec-title reveal">Four ways to pay, <em>built around who is buying.</em></h2>
-    <p class="sec-sub reveal">Coffee shops and employers pay a monthly subscription. Recruitment agencies pay per worker. Individual workers pay for their own certification. Each model is self-contained and recurring.</p>
-    <div class="bm-grid">
-      <div class="bm-card reveal reveal-delay-1">
-        <div class="bm-pct">60%</div>
-        <div class="bm-name">Employer Subscriptions</div>
-        <div class="bm-tiers">
-          <div class="bm-tier"><strong>Starter:</strong> SAR 1,500 a month, up to 20 workers</div>
-          <div class="bm-tier"><strong>Growth:</strong> SAR 3,750 a month, up to 75 workers</div>
-          <div class="bm-tier"><strong>Enterprise:</strong> SAR 9,375 a month, unlimited</div>
-        </div>
-      </div>
-      <div class="bm-card reveal reveal-delay-2">
-        <div class="bm-pct">25%</div>
-        <div class="bm-name">Individual &amp; Agency Courses</div>
-        <div class="bm-tiers">
-          <div class="bm-tier"><strong>Interview Prep:</strong> SAR 170 per worker, for candidates preparing for placement</div>
-          <div class="bm-tier"><strong>Standard Certification:</strong> SAR 320 per worker, full pre-arrival course</div>
-          <div class="bm-tier"><strong>Agency Bulk Rate:</strong> SAR 225 per worker for agencies placing five or more</div>
-        </div>
-      </div>
-      <div class="bm-card reveal reveal-delay-3">
-        <div class="bm-pct">15%</div>
-        <div class="bm-name">Custom and Government Work</div>
-        <div class="bm-tiers">
-          <div class="bm-tier"><strong>Corporate training programmes:</strong> from SAR 7,500</div>
-          <div class="bm-tier"><strong>Live group sessions:</strong> SAR 750 per session</div>
-          <div class="bm-tier"><strong>Government contracts:</strong> SAR 75K to 375K per project</div>
-        </div>
-      </div>
-    </div>
-    <div class="bm-metrics reveal">
-      <div class="bm-met"><div class="bm-met-num">SAR 656K</div><div class="bm-met-lbl">Year One Revenue</div></div>
-      <div class="bm-met"><div class="bm-met-num">85%</div><div class="bm-met-lbl">Gross Margin</div></div>
-      <div class="bm-met"><div class="bm-met-num">Month 4</div><div class="bm-met-lbl">Break-Even</div></div>
-      <div class="bm-met"><div class="bm-met-num">SAR 124K</div><div class="bm-met-lbl">Total Operating Costs</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FINANCIALS -->
-<section class="financials" id="financials">
-  <div class="wrap">
-    <div class="sec-eyebrow"><div class="sec-edot"></div>The Numbers</div>
-    <h2 class="sec-title reveal">A conservative model that <em>still makes a strong case.</em></h2>
-    <p class="sec-sub reveal">We have kept these projections grounded in real market data and comparable businesses across the region. There is considerable upside we have not included.</p>
-    <div class="fin-table-wrap reveal">
-      <table class="fin-table">
-        <thead><tr><th>Metric</th><th class="hl">Year 1</th><th>Year 2</th><th>Year 3</th></tr></thead>
-        <tbody>
-          <tr><td class="label">Workers Trained</td><td class="y1">2,500</td><td>12,000</td><td>35,000</td></tr>
-          <tr><td class="label">B2B Clients</td><td class="y1">30</td><td>100</td><td>300</td></tr>
-          <tr><td class="label">Revenue (SAR)</td><td class="y1">656K</td><td>3.15M</td><td>9.19M</td></tr>
-          <tr><td class="label">Revenue (USD)</td><td class="y1">$175K</td><td>$840K</td><td>$2.45M</td></tr>
-          <tr><td class="label">Net Margin</td><td class="y1">31%</td><td>52%</td><td>63%</td></tr>
-          <tr><td class="label">Team Size</td><td class="y1">4</td><td>12</td><td>30</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="fin-summary">
-      <div class="fs-card primary reveal"><div class="fs-val">SAR 375K</div><div class="fs-lbl">What we are raising</div></div>
-      <div class="fs-card reveal reveal-delay-1"><div class="fs-val">15%</div><div class="fs-lbl">Equity on offer</div></div>
-      <div class="fs-card reveal reveal-delay-2"><div class="fs-val">SAR 536K</div><div class="fs-lbl">Projected year one profit</div></div>
-      <div class="fs-card reveal reveal-delay-3"><div class="fs-val">8 to 12x</div><div class="fs-lbl">Projected return by year three</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- VISION 2030 -->
-<section class="vision" id="vision">
-  <div class="wrap">
-    <div class="sec-eyebrow"><div class="sec-edot"></div>Vision 2030</div>
-    <h2 class="sec-title reveal">This is not just a business. <em>It is what the Kingdom is asking for.</em></h2>
-    <p class="sec-sub reveal">SkillBridge Arabia sits squarely within Saudi Vision 2030. That is not a marketing line — it makes us eligible for government funding, ministry partnerships and HRDF training subsidies.</p>
-    <div class="vision-grid">
-      <div class="v-card reveal"><span class="v-icon">&#127891;</span><div><div class="v-title">Human Capital Development</div><div class="v-desc">We are certifying 10,000 workers by 2027. Each one moves from a medium-HDI background into a high-HDI economy ready to contribute, not just survive.</div></div></div>
-      <div class="v-card reveal reveal-delay-1"><span class="v-icon">&#128176;</span><div><div class="v-title">A Thriving Economy</div><div class="v-desc">The F&amp;B sector is generating 180,000 new jobs. Workers who arrive trained contribute from their very first shift rather than taking weeks to become useful.</div></div></div>
-      <div class="v-card reveal reveal-delay-2"><span class="v-icon">&#11088;</span><div><div class="v-title">Quality of Life</div><div class="v-desc">Better trained staff means better service for Saudi residents and visitors. That matters to every coffee shop, hotel and restaurant in the Kingdom.</div></div></div>
-      <div class="v-card reveal reveal-delay-3"><span class="v-icon">&#127760;</span><div><div class="v-title">Human Capital Transfer</div><div class="v-desc">Workers from countries with an HDI of 0.55 are being prepared to thrive in an economy with an HDI of 0.88. That is a genuine and measurable improvement in human lives, not just a training metric.</div></div></div>
-    </div>
-    <div class="vision-badge reveal">
-      <div class="vb-item">&#9989; Eligible for HRDF funding</div>
-      <div class="vb-divider"></div>
-      <div class="vb-item">&#9989; Ministry of HR partnership pathway open</div>
-      <div class="vb-divider"></div>
-      <div class="vb-item">&#9989; Government contracts worth SAR 75K to 375K per project</div>
-    </div>
-  </div>
-</section>
-
-<!-- DEMO CTA -->
-<section class="demo-cta" id="demo">
-  <div class="demo-cta-inner">
     <div>
-      <div class="dci-eyebrow">Get in touch</div>
-      <h2 class="dci-title">Seen enough to want a proper conversation?</h2>
-      <p class="dci-sub">We are happy to walk you through everything in more detail. The platform, the numbers, the market and where we are headed.</p>
-      <div class="dci-items">
-        <div class="dci-item"><div class="dci-check">&#10003;</div>A guided walkthrough of the live platform</div>
-        <div class="dci-item"><div class="dci-check">&#10003;</div>The full financial model, open for questions</div>
-        <div class="dci-item"><div class="dci-check">&#10003;</div>How we are approaching Vision 2030 partnerships</div>
-        <div class="dci-item"><div class="dci-check">&#10003;</div>Time to ask us anything</div>
-        <div class="dci-item"><div class="dci-check">&#10003;</div>We will come back to you within 24 hours</div>
-      </div>
-      <div class="dci-try">
-        <span style="font-size:22px">&#9654;</span>
-        <div>
-          <div class="dci-try-label">Or have a look around the platform yourself first, no account needed</div>
-          <a class="dci-try-link" href="https://app.skillbridgearabia.com" target="_blank" rel="noopener">Open the platform &rarr;</a>
+      <div class="form-box" id="cform">
+        <div class="form-err" id="ferr">Please enter your name and a valid email address.</div>
+        <div class="ff"><label>Your name</label><input type="text" id="fn" placeholder="Mohammad Rahman"></div>
+        <div class="ff"><label>Email address</label><input type="email" id="fe" placeholder="you@company.com"></div>
+        <div class="ff"><label>Organisation</label><input type="text" id="fc" placeholder="Company or agency name"></div>
+        <div class="ff"><label>I am a</label>
+          <select id="fr">
+            <option value="">Select one…</option>
+            <option>Recruitment Agency</option>
+            <option>Coffee Shop or F&amp;B Employer</option>
+            <option>Investor</option>
+            <option>Worker looking to enrol</option>
+            <option>Tech or Partnership</option>
+            <option>Other</option>
+          </select>
         </div>
+        <div class="ff"><label>Message</label><textarea id="fm" placeholder="Tell us what you are looking for…"></textarea></div>
+        <button class="btn-submit" onclick="handleSubmit()">Send message →</button>
+        <p class="form-note">Confidential. We respond within 24 hours.</p>
       </div>
-    </div>
-    <div class="demo-cta-form">
-      <div class="form-header-title">Book a demo</div>
-      <div class="form-header-sub">We keep everything confidential and reply within 24 hours.</div>
-      <div id="cta-form-wrap">
-        <div class="row2">
-          <div class="field"><label>Your name</label><input type="text" id="c-name" placeholder="Full name"></div>
-          <div class="field"><label>Email address</label><input type="email" id="c-email" placeholder="you@company.com"></div>
-        </div>
-        <div class="row2">
-          <div class="field"><label>Organisation</label><input type="text" id="c-company" placeholder="Company or fund name"></div>
-          <div class="field"><label>Your role</label>
-            <select id="c-role">
-              <option value="">Please select</option>
-              <option>Investor / VC</option>
-              <option>Angel Investor</option>
-              <option>Strategic Partner</option>
-              <option>Government / Ministry</option>
-              <option>Employer / Business Owner</option>
-              <option>Recruitment Agency</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="field"><label>Anything you would like us to know</label><textarea id="c-message" placeholder="What interests you most? Any questions you already have?"></textarea></div>
-        <div class="form-error" id="cta-err">Please add your name and a valid email address.</div>
-        <button class="submit-btn" id="cta-btn" onclick="submitForm()">Send your request &rarr;</button>
-        <div class="form-trust">&#128274; Confidential. We will never share your details with anyone.</div>
-      </div>
-      <div class="form-success" id="cta-success">
-        <div class="form-success-icon">&#9989;</div>
-        <div class="form-success-title">Got it, thank you.</div>
-        <div class="form-success-sub">We will be in touch within 24 hours to find a time that works for you.</div>
+      <div class="form-ok" id="fok">
+        <div class="form-ok-icon">✅</div>
+        <h3>Message received.</h3>
+        <p>We will be in touch within 24 hours at hello@skillbridgearabia.com</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">Skill<em>Bridge</em> Arabia</div>
-    <div class="footer-links">
-      <span class="footer-link">Privacy</span>
-      <span class="footer-link">Contact</span>
-      <span class="footer-link">Vision 2030</span>
+<footer>
+  <div class="footer-inner container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="fb-name">Skill<em>Bridge</em> Arabia</div>
+        <p>From Origin to Excellence. Certified training for the GCC's frontline workforce.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="https://app.skillbridgearabia.com" target="_blank">Try the Platform</a>
+          <a href="https://app.skillbridgearabia.com" target="_blank">Worker Login</a>
+          <a href="https://app.skillbridgearabia.com" target="_blank">Business Login</a>
+        </div>
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <a href="#courses">Barista Professional</a>
+          <a href="#courses">Arabic for Hospitality</a>
+          <a href="#courses">Front Liner Excellence</a>
+          <a href="#courses">GCC Workplace Readiness</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#for">For Agencies</a>
+          <a href="#for">For Employers</a>
+          <a href="#for">For Workers</a>
+          <a href="https://skillbridgearabia.com/investor">Investor Deck</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+      </div>
     </div>
-    <div class="footer-copy">&copy; 2026 SkillBridge Arabia &middot; Riyadh, Saudi Arabia</div>
+    <div class="footer-bottom">
+      <p>© 2026 SkillBridge Arabia · hello@skillbridgearabia.com</p>
+      <div class="footer-tags">
+        <span class="footer-tag">Vision 2030</span>
+        <span class="footer-tag">EdTech</span>
+        <span class="footer-tag">WorkTech</span>
+        <span class="footer-tag">Riyadh, KSA</span>
+      </div>
+    </div>
   </div>
 </footer>
 
-<div class="toast" id="toast"><span id="t-ic">&#9989;</span><span id="t-msg">Done</span></div>
+<div id="toast"></div>
 
 <script>
-// FORM SUBMIT
-async function submitForm(){
-  const name=document.getElementById("c-name").value.trim();
-  const email=document.getElementById("c-email").value.trim();
-  const company=document.getElementById("c-company").value.trim();
-  const role=document.getElementById("c-role").value;
-  const message=document.getElementById("c-message").value.trim();
-  const errEl=document.getElementById("cta-err");
-  const btn=document.getElementById("cta-btn");
-  errEl.classList.remove("show");
-  if(!name||!email||!email.includes("@")||!email.includes(".")){errEl.classList.add("show");return;}
-  btn.disabled=true; btn.textContent="Sending…";
-  try{
-    const res=await fetch("/api/demo",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,email,company,role,message})});
-    const data=await res.json();
-    if(data.ok){
-      document.getElementById("cta-form-wrap").style.display="none";
-      document.getElementById("cta-success").classList.add("show");
-      if(typeof gtag!=="undefined") gtag("event","demo_request",{event_category:"conversion"});
-      showToast("Demo request sent! We’ll be in touch within 24h.","ok");
-    }else throw new Error(data.error||"Error");
-  }catch(e){
-    btn.disabled=false; btn.textContent="Request Demo →";
-    errEl.textContent="Something went wrong. Please try again.";
-    errEl.classList.add("show");
-  }
-}
-
-// SCROLL REVEAL
-const revObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");revObs.unobserve(e.target);}});
-},{threshold:0.12});
-document.querySelectorAll(".reveal").forEach(el=>revObs.observe(el));
-
-// SMOOTH SCROLL
-document.querySelectorAll("a[href^='#']").forEach(a=>{
-  a.addEventListener("click",e=>{
-    const target=document.querySelector(a.getAttribute("href"));
-    if(target){e.preventDefault();target.scrollIntoView({behavior:"smooth",block:"start"});}
+// Smooth scroll for all anchor links — fixes the Partner with us button
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const id = this.getAttribute('href');
+    if (id === '#') return;
+    const target = document.querySelector(id);
+    if (target) {
+      e.preventDefault();
+      const offset = 70;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
   });
 });
 
-// TOAST
-let tt;
-function showToast(msg,type){
-  const el=document.getElementById("toast");
-  document.getElementById("t-msg").textContent=msg;
-  document.getElementById("t-ic").textContent=type==="ok"?"&#9989;":"&#9888;&#65039;";
-  el.className="toast "+(type||"ok")+" show";
-  clearTimeout(tt); tt=setTimeout(()=>el.classList.remove("show"),5000);
+// Nav hide on scroll down, show on scroll up
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('nav');
+  const y = window.scrollY;
+  if (y > lastY && y > 100) {
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    nav.style.transform = 'translateY(0)';
+  }
+  lastY = y;
+}, { passive: true });
+
+// Form submission
+async function handleSubmit() {
+  const name  = document.getElementById('fn').value.trim();
+  const email = document.getElementById('fe').value.trim();
+  const co    = document.getElementById('fc').value.trim();
+  const role  = document.getElementById('fr').value;
+  const msg   = document.getElementById('fm').value.trim();
+  const err   = document.getElementById('ferr');
+
+  err.style.display = 'none';
+  if (!name || !email || !email.includes('@')) {
+    err.style.display = 'block';
+    err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    return;
+  }
+
+  const btn = document.querySelector('.btn-submit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    // Replace this URL with your Google Apps Script deployment URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxw1-0fM9-5pX4F8QykpxxpCD0HDgtV9AxRLI-rVD9QSbtFSfoJcXZphUenNze1lEXd/exec';
+    if (GOOGLE_SCRIPT_URL) {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, company: co, role, message: msg, source: 'company-profile-v3' })
+      });
+    }
+    document.getElementById('cform').style.display = 'none';
+    document.getElementById('fok').style.display = 'block';
+    showToast('Message sent. We will be in touch soon.', 'ok');
+  } catch (e) {
+    btn.textContent = 'Send message →';
+    btn.disabled = false;
+    showToast('Something went wrong. Please email us directly.', 'err');
+  }
+}
+
+function showToast(msg, type = 'ok') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `show ${type}`;
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.className = ''; }, 4500);
 }
 </script>
 </body>
