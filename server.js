@@ -1,48 +1,26 @@
 const express = require('express');
 const path    = require('path');
+const fs      = require('fs');
 const app     = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+const PUBLIC     = path.join(__dirname, 'public');
+const SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL || '';
 
-// ── Inject Google Script URL from environment variable ────────────────────
-// This replaces the placeholder in both HTML files at serve time
-// Set GOOGLE_SCRIPT_URL in Render environment variables
-function injectScriptUrl(html) {
-  const url = process.env.GOOGLE_SCRIPT_URL || '';
-  return html.replace(/REPLACE_WITH_SCRIPT_URL/g, url);
+function serveHtml(file, res) {
+  try {
+    let html = fs.readFileSync(path.join(PUBLIC, file), 'utf8');
+    html = html.replace(/REPLACE_WITH_SCRIPT_URL/g, SCRIPT_URL);
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.send(html);
+  } catch (e) {
+    res.status(404).send('Not found: ' + file);
+  }
 }
 
-// ── Routes ────────────────────────────────────────────────────────────────
+app.get('/investor', (req, res) => serveHtml('investor.html', res));
+app.get('/',         (req, res) => serveHtml('index.html',    res));
+app.use(express.static(PUBLIC));
+app.get('*',         (req, res) => serveHtml('index.html',    res));
 
-// Investor page
-app.get('/investor', (req, res) => {
-  const fs   = require('fs');
-  const file = path.join(__dirname, 'public', 'investor.html');
-  try {
-    const html = injectScriptUrl(fs.readFileSync(file, 'utf8'));
-    res.setHeader('Content-Type', 'text/html');
-    res.send(html);
-  } catch (e) {
-    res.status(404).send('Investor page not found. Please add public/investor.html');
-  }
-});
-
-// Main company profile — catch all other routes
-app.get('*', (req, res) => {
-  const fs   = require('fs');
-  const file = path.join(__dirname, 'public', 'index.html');
-  try {
-    const html = injectScriptUrl(fs.readFileSync(file, 'utf8'));
-    res.setHeader('Content-Type', 'text/html');
-    res.send(html);
-  } catch (e) {
-    res.status(500).send('Server error');
-  }
-});
-
-// ── Start ─────────────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`SkillBridge Arabia running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log('SkillBridge Arabia running on port ' + PORT));
