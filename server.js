@@ -61,6 +61,10 @@ app.post('/api/demo', (req, res) => {
   proxyReq.end();
 });
 
+app.get('/investor', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'investor.html'));
+});
+
 // ── Serve index.html ──
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
