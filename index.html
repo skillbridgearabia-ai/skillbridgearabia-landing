@@ -671,7 +671,7 @@ footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(25
           <span class="ch-icon">✉️</span>
           <div><div class="ch-label">Email</div><div class="ch-val">hello@skillbridgearabia.com</div></div>
         </a>
-        <a href="https://wa.me/966569522777" class="channel">
+        <a href="https://wa.me/?text=Hello%20SkillBridge%20Arabia%2C%20I%20would%20like%20to%20learn%20more%20about%20partnering%20with%20you." class="channel">
           <span class="ch-icon">💬</span>
           <div><div class="ch-label">WhatsApp</div><div class="ch-val">Message us on WhatsApp</div></div>
         </a>
@@ -687,6 +687,7 @@ footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(25
     </div>
     <div>
       <div class="form-box" id="cform">
+        <input type="hidden" id="gscript-url" value="REPLACE_WITH_SCRIPT_URL">
         <div class="form-err" id="ferr">Please enter your name and a valid email address.</div>
         <div class="ff"><label>Your name</label><input type="text" id="fn" placeholder="Mohammad Rahman"></div>
         <div class="ff"><label>Email address</label><input type="email" id="fe" placeholder="you@company.com"></div>
@@ -812,8 +813,7 @@ async function handleSubmit() {
   btn.disabled = true;
 
   try {
-    // Replace this URL with your Google Apps Script deployment URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxw1-0fM9-5pX4F8QykpxxpCD0HDgtV9AxRLI-rVD9QSbtFSfoJcXZphUenNze1lEXd/exec';
+    const GOOGLE_SCRIPT_URL = document.getElementById('https://script.google.com/macros/s/AKfycbzIlEf6m_O_8iELZgVNW1d97JGMe4vz43C6xvCRYxIT3snF4_Vz_EUefYa45iAXrUpm/exec')?.value || '';
     if (GOOGLE_SCRIPT_URL) {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
