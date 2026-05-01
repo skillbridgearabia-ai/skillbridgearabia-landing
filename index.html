@@ -54,7 +54,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;display:flex;ali
 .nav-links a:hover{color:var(--gold-deep)}
 .nav-cta{padding:8px 20px;background:var(--gold);color:var(--white);border-radius:var(--radius);font-size:.78rem;font-weight:600;letter-spacing:.03em;transition:all .18s}
 .nav-cta:hover{background:var(--gold-deep);transform:translateY(-1px)}
-@media(max-width:700px){.nav-links{display:none}}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s;display:block}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-drawer{display:none;position:fixed;top:62px;left:0;right:0;background:rgba(250,250,246,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:199;padding:16px 5% 20px;flex-direction:column;gap:4px;box-shadow:0 8px 24px rgba(26,23,20,.1)}
+.mobile-drawer.open{display:flex}
+.mobile-drawer a{font-size:.9rem;font-weight:500;color:var(--ink-2);padding:11px 0;border-bottom:1px solid var(--border);letter-spacing:.02em;transition:color .15s}
+.mobile-drawer a:last-child{border-bottom:none}
+.mobile-drawer a:hover{color:var(--gold-deep)}
+.mobile-drawer .m-cta{margin-top:8px;padding:12px;background:var(--gold);color:var(--white);border-radius:var(--radius);text-align:center;font-weight:600;font-size:.9rem}
+.mobile-drawer .m-cta:hover{background:var(--gold-deep);color:var(--white)}
+@media(max-width:700px){.nav-links{display:none}.hamburger{display:flex}}
 
 /* HERO */
 #hero{padding:120px 5% 80px;background:var(--white);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
@@ -294,6 +306,21 @@ footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(25
 .footer-tags{display:flex;gap:9px;flex-wrap:wrap}
 .footer-tag{font-size:.67rem;color:rgba(255,255,255,.18);padding:3px 9px;border:1px solid rgba(255,255,255,.07);border-radius:12px}
 
+/* AUDIENCE JUMP BUTTONS */
+.audience-jumps{margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08)}
+.aj-label{font-size:.7rem;color:rgba(255,255,255,.28);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;font-weight:500}
+.aj-btns{display:flex;flex-wrap:wrap;gap:10px}
+.aj-btn{padding:9px 18px;border-radius:24px;font-size:.82rem;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all .2s;text-decoration:none}
+.aj-agency{background:rgba(184,64,48,.15);color:#F4A090;border:1px solid rgba(184,64,48,.3)}
+.aj-agency:hover{background:rgba(184,64,48,.25);color:#fff}
+.aj-employer{background:rgba(45,106,82,.15);color:#90CEB8;border:1px solid rgba(45,106,82,.3)}
+.aj-employer:hover{background:rgba(45,106,82,.25);color:#fff}
+.aj-worker{background:rgba(183,138,42,.15);color:var(--gold-mid);border:1px solid rgba(183,138,42,.3)}
+.aj-worker:hover{background:rgba(183,138,42,.25);color:#fff}
+.aj-investor{background:rgba(183,138,42,.2);color:var(--gold-mid);border:1px solid rgba(183,138,42,.45)}
+.aj-investor:hover{background:var(--gold);color:#fff}
+@media(max-width:600px){.aj-btns{flex-direction:column}.aj-btn{justify-content:center}}
+
 /* TOAST */
 #toast{position:fixed;bottom:22px;right:22px;background:var(--ink);color:var(--white);padding:13px 18px;border-radius:var(--radius);font-size:.84rem;z-index:999;transform:translateY(80px);transition:transform .28s cubic-bezier(.34,1.56,.64,1);box-shadow:var(--shadow-2);max-width:280px;font-weight:400}
 #toast.show{transform:translateY(0)}
@@ -315,8 +342,20 @@ footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(25
       <a href="#contact">Contact</a>
       <a href="https://app.skillbridgearabia.com" class="nav-cta" target="_blank">Try Platform →</a>
     </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="mobile-drawer" id="mobile-drawer">
+  <a href="#how" onclick="closeMenu()">How it works</a>
+  <a href="#courses" onclick="closeMenu()">Courses</a>
+  <a href="#for" onclick="closeMenu()">For agencies and employers</a>
+  <a href="#demo" onclick="closeMenu()">Watch a lesson</a>
+  <a href="#traction" onclick="closeMenu()">Traction</a>
+  <a href="#contact" onclick="closeMenu()">Contact us</a>
+  <a href="https://app.skillbridgearabia.com" class="m-cta" target="_blank">Try Platform →</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -347,6 +386,17 @@ footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(25
         <div class="hsc-num">SAR 0</div>
         <div class="hsc-lbl">Cost to the worker. Always and forever.</div>
         <div class="hsc-sub">Our commitment to the people we serve</div>
+      </div>
+    </div>
+
+    <!-- Audience jump buttons - especially useful on mobile -->
+    <div class="audience-jumps">
+      <div class="aj-label">Jump to what matters to you</div>
+      <div class="aj-btns">
+        <a href="#for" class="aj-btn aj-agency">🏢 I am an agency</a>
+        <a href="#for" class="aj-btn aj-employer">☕ I am an employer</a>
+        <a href="#courses" class="aj-btn aj-worker">👷 I am a worker</a>
+        <a href="/investor" class="aj-btn aj-investor">📊 Investor deck →</a>
       </div>
     </div>
   </div>
@@ -632,10 +682,10 @@ footer{background:var(--ink-2);padding:48px 5% 28px;border-top:1px solid rgba(25
         <div class="trac-row"><div class="trac-check tc-prog">🔄</div><div class="trac-label">HRDF eligibility, government funding pathway</div><span class="trac-pill tp-wip">In progress</span></div>
       </div>
       <div class="trac-nums">
-        <div class="tn-card"><div class="tn-big">$25.99B</div><div class="tn-lbl">Saudi F&amp;B market 2026</div></div>
+        <div class="tn-card"><div class="tn-big">$32.56B</div><div class="tn-lbl">Saudi F&amp;B market 2026</div></div>
         <div class="tn-card"><div class="tn-big">$67M</div><div class="tn-lbl">Serviceable market</div></div>
         <div class="tn-card"><div class="tn-big">85%</div><div class="tn-lbl">Target gross margin</div></div>
-        <div class="tn-card"><div class="tn-big">Month 4</div><div class="tn-lbl">Projected break-even</div></div>
+        <div class="tn-card"><div class="tn-big">Month 4/10</div><div class="tn-lbl">Break-even (cash/loaded)</div></div>
       </div>
     </div>
   </div>
@@ -776,6 +826,26 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       window.scrollTo({ top, behavior: 'smooth' });
     }
   });
+});
+
+// Mobile menu
+function toggleMenu() {
+  const drawer = document.getElementById('mobile-drawer');
+  const burger = document.getElementById('hamburger');
+  drawer.classList.toggle('open');
+  burger.classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobile-drawer').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+  const drawer = document.getElementById('mobile-drawer');
+  const burger = document.getElementById('hamburger');
+  if (!drawer.contains(e.target) && !burger.contains(e.target)) {
+    closeMenu();
+  }
 });
 
 // Nav hide on scroll down, show on scroll up
