@@ -3,23 +3,20 @@ const path    = require('path');
 const fs      = require('fs');
 const app     = express();
 
-const PUBLIC = path.join(__dirname, 'public');
+app.get('/investor', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'investor.html'));
+});
 
-function serveHtml(filePath, res) {
-  try {
-    const html = fs.readFileSync(filePath, 'utf8');
-    res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    res.send(html);
-  } catch (e) {
-    res.status(404).send('Not found: ' + filePath);
-  }
-}
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
-app.get('/investor', (req, res) => serveHtml(path.join(PUBLIC, 'investor.html'), res));
-app.get('/',        (req, res) => serveHtml(path.join(__dirname, 'index.html'), res));
-app.use(express.static(PUBLIC));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname));
-app.get('*',        (req, res) => serveHtml(path.join(__dirname, 'index.html'), res));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log('SkillBridge Arabia on port ' + PORT));
