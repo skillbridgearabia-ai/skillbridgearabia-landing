@@ -608,7 +608,7 @@ async function submitQuickRequest() {
   const btn = document.querySelector('#qr-form button');
   btn.textContent = 'Sending…'; btn.disabled = true;
   try {
-    const SCRIPT_URL = '##SCRIPT_URL##';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzIlEf6m_O_8iELZgVNW1d97JGMe4vz43C6xvCRYxIT3snF4_Vz_EUefYa45iAXrUpm/exec';
     if (SCRIPT_URL && !SCRIPT_URL.includes('##')) {
       await fetch(SCRIPT_URL, {
         method:'POST', mode:'no-cors',
@@ -722,8 +722,8 @@ async function handleInvestorSubmit() {
   btn.textContent = 'Sending…'; btn.disabled = true;
 
   try {
-    const SCRIPT_URL = '##SCRIPT_URL##';
-    if (SCRIPT_URL && SCRIPT_URL !== '##SCRIPT_URL##') {
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzIlEf6m_O_8iELZgVNW1d97JGMe4vz43C6xvCRYxIT3snF4_Vz_EUefYa45iAXrUpm/exec';
+    if (SCRIPT_URL && SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzIlEf6m_O_8iELZgVNW1d97JGMe4vz43C6xvCRYxIT3snF4_Vz_EUefYa45iAXrUpm/exec') {
       await fetch(SCRIPT_URL, {
         method:'POST', mode:'no-cors',
         headers:{'Content-Type':'application/json'},
@@ -752,3 +752,4 @@ function showToast(msg, type='ok') {
 }
 </script>
 </body>
+</html>
