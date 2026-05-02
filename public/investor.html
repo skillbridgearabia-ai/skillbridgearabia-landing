@@ -240,10 +240,35 @@ footer{background:var(--dark);padding:32px 5% 22px}
     <a href="https://skillbridgearabia.com" class="nav-logo">Skill<em>Bridge</em> Arabia</a>
     <div class="nav-right">
       <a href="https://skillbridgearabia.com" class="nav-back">← Main site</a>
-      <a href="#contact" class="btn-request" onclick="smoothTo('contact')">Request access →</a>
+      <button class="btn-request" onclick="openQuickRequest()">Request access →</button>
     </div>
   </div>
 </nav>
+
+<!-- QUICK REQUEST MODAL -->
+<div id="qr-overlay" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(26,23,20,.7);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:14px;padding:36px 32px;max-width:440px;width:100%;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.25)">
+    <button onclick="closeQuickRequest()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#A09890;line-height:1">×</button>
+    <div style="font-size:1.8rem;margin-bottom:10px">🔐</div>
+    <h3 style="font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:8px;font-weight:700">Request investor access</h3>
+    <p style="font-size:.88rem;color:var(--ink-3);margin-bottom:20px;line-height:1.7;font-weight:300">Leave your details and we will send your access credentials within 24 hours. Username is <strong style="color:var(--ink)">skillbridge</strong> — password will be in your email.</p>
+    <div id="qr-form">
+      <div class="ff"><label>Full name</label><input type="text" id="qr-name" placeholder="Your name"></div>
+      <div class="ff"><label>Email address</label><input type="email" id="qr-email" placeholder="you@fund.com"></div>
+      <div class="ff"><label>Organisation (optional)</label><input type="text" id="qr-org" placeholder="Fund or company name"></div>
+      <div id="qr-err" style="display:none;padding:8px 12px;background:var(--terra-l);border-radius:var(--r);font-size:.82rem;color:var(--terra);margin-bottom:10px">Please enter your name and a valid email address.</div>
+      <button onclick="submitQuickRequest()" style="width:100%;padding:11px;background:var(--gold);color:#fff;border:none;border-radius:var(--r);font-family:var(--sans);font-size:.92rem;font-weight:600;cursor:pointer;transition:background .18s" onmouseover="this.style.background='var(--gold-h)'" onmouseout="this.style.background='var(--gold)'">Send request →</button>
+      <div style="margin-top:12px;text-align:center;font-size:.78rem;color:var(--ink-4)">Or message us on WhatsApp →
+        <a href="https://wa.me/?text=Hello%20SkillBridge%20Arabia%2C%20I%20would%20like%20to%20request%20investor%20access%20to%20the%20deck." target="_blank" style="color:var(--gold-h);font-weight:600;display:block;margin-top:4px">Open WhatsApp</a>
+      </div>
+    </div>
+    <div id="qr-ok" style="display:none;text-align:center;padding:16px 0">
+      <div style="font-size:2rem;margin-bottom:10px">✅</div>
+      <div style="font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-bottom:6px;font-weight:600">Request sent.</div>
+      <div style="font-size:.86rem;color:var(--ink-3);line-height:1.7">We will email your credentials within 24 hours.<br><strong style="color:var(--ink)">Username: skillbridge</strong><br>Password: sent by email</div>
+    </div>
+  </div>
+</div>
 
 <!-- TEASER — visible to everyone -->
 <section id="teaser">
@@ -284,14 +309,17 @@ footer{background:var(--dark);padding:32px 5% 22px}
       <p>This deck is confidential. Enter your credentials to view the full financial projections, market analysis and investment details.</p>
       <div class="lock-form">
         <div class="lf-row">
-          <input type="email" id="gate-user" placeholder="Your email address" autocomplete="email">
+          <input type="email" id="gate-user" placeholder="Username" autocomplete="username">
           <input type="password" id="gate-pass" placeholder="Password" autocomplete="current-password" onkeypress="if(event.key==='Enter')tryUnlock()">
         </div>
         <button class="btn-enter" onclick="tryUnlock()">Access investor deck →</button>
         <div class="lock-err" id="gate-err">Incorrect credentials. Please contact us to request access.</div>
       </div>
       <div class="lock-note">
-        No credentials yet? <a href="#contact" onclick="smoothTo('contact')">Contact us</a> and we will send them within 24 hours.
+        No credentials yet?
+        <a href="javascript:void(0)" onclick="closePreviewOpenRequest()">Request access now</a>
+        and we will send them within 24 hours. Or go back to the
+        <a href="https://skillbridgearabia.com">main site</a>.
       </div>
     </div>
   </div>
@@ -528,10 +556,10 @@ footer{background:var(--dark);padding:32px 5% 22px}
       <h3>Request received.</h3>
       <p>We will send your access credentials within 24 hours.</p>
       <div class="creds-box">
-        Your credentials will be sent to your email address.<br><br>
-        <strong>Username:</strong> Your email address<br>
-        <strong>Password:</strong> Will be included in your confirmation email<br><br>
-        Return to this page and use those credentials to unlock the full deck.
+        Your access credentials will be sent to your email address within 24 hours.<br><br>
+        <strong>Username:</strong> skillbridge<br>
+        <strong>Password:</strong> Sent in your confirmation email<br><br>
+        Return to <strong>skillbridgearabia.com/investor</strong> and enter your credentials to unlock the full deck.
       </div>
     </div>
   </div>
@@ -554,6 +582,62 @@ footer{background:var(--dark);padding:32px 5% 22px}
 <div id="toast"></div>
 
 <script>
+// ── Quick request modal ───────────────────────────────────────────────────
+function openQuickRequest() {
+  const overlay = document.getElementById('qr-overlay');
+  overlay.style.display = 'flex';
+  setTimeout(() => document.getElementById('qr-name').focus(), 100);
+}
+function closeQuickRequest() {
+  document.getElementById('qr-overlay').style.display = 'none';
+}
+function closePreviewOpenRequest() {
+  // Close gate overlay, open modal
+  openQuickRequest();
+}
+async function submitQuickRequest() {
+  const name  = document.getElementById('qr-name').value.trim();
+  const email = document.getElementById('qr-email').value.trim();
+  const org   = document.getElementById('qr-org').value.trim();
+  const err   = document.getElementById('qr-err');
+  err.style.display = 'none';
+  if (!name || !email || !email.includes('@')) {
+    err.style.display = 'block';
+    return;
+  }
+  const btn = document.querySelector('#qr-form button');
+  btn.textContent = 'Sending…'; btn.disabled = true;
+  try {
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzIlEf6m_O_8iELZgVNW1d97JGMe4vz43C6xvCRYxIT3snF4_Vz_EUefYa45iAXrUpm/exec';
+    if (SCRIPT_URL && !SCRIPT_URL.includes('##')) {
+      await fetch(SCRIPT_URL, {
+        method:'POST', mode:'no-cors',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          name, email, company:org,
+          role:'Investor',
+          message:'Quick access request from investor page gate',
+          source:'investor-page-gated'
+        })
+      });
+    }
+    document.getElementById('qr-form').style.display = 'none';
+    document.getElementById('qr-ok').style.display = 'block';
+  } catch(e) {
+    btn.textContent = 'Send request →'; btn.disabled = false;
+    showToast('Something went wrong. Email us at hello@skillbridgearabia.com', 'err');
+  }
+}
+// Close modal on overlay click
+document.addEventListener('click', function(e) {
+  const overlay = document.getElementById('qr-overlay');
+  if (e.target === overlay) closeQuickRequest();
+});
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeQuickRequest();
+});
+
 // ── Smooth scroll ──────────────────────────────────────────────────────────
 function smoothTo(id) {
   const el = document.getElementById(id);
@@ -582,14 +666,14 @@ function tryUnlock() {
   const err   = document.getElementById('gate-err');
   err.style.display = 'none';
 
-  // Username: any valid email. Password: investor2026
-  if (!user || !user.includes('@')) {
-    err.textContent = 'Please enter your email address as the username.';
+  // Username: skillbridge (fixed). Password: investor2026
+  if (user.toLowerCase() !== 'skillbridge') {
+    err.textContent = 'Incorrect username. Check your access email for credentials.';
     err.style.display = 'block';
     return;
   }
   if (pass !== CORRECT_PASS) {
-    err.textContent = 'Incorrect password. Please contact us to request access.';
+    err.textContent = 'Incorrect password. Check your access email for credentials.';
     err.style.display = 'block';
     document.getElementById('gate-pass').value = '';
     document.getElementById('gate-pass').focus();
@@ -638,8 +722,8 @@ async function handleInvestorSubmit() {
   btn.textContent = 'Sending…'; btn.disabled = true;
 
   try {
-    const SCRIPT_URL = '##SCRIPT_URL##';
-    if (SCRIPT_URL && SCRIPT_URL !== '##SCRIPT_URL##') {
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyjSTvP4wK2LlYzRKqMZAzLyf86IAvbP8qok4Ac__J-p0RgXLohi433KRqnd06EBnY/exec';
+    if (SCRIPT_URL && SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbyjSTvP4wK2LlYzRKqMZAzLyf86IAvbP8qok4Ac__J-p0RgXLohi433KRqnd06EBnY/exec') {
       await fetch(SCRIPT_URL, {
         method:'POST', mode:'no-cors',
         headers:{'Content-Type':'application/json'},
